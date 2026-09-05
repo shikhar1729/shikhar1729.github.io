@@ -154,7 +154,9 @@ after an `al_folio_core` upgrade, or delete the file to fall back to stock:
 
 - `_includes/bib.liquid` — drops the literal `In ` before `booktitle`, and drops the
   `abbr` venue badge that used to sit above the publication thumbnail. `abbr` is still set
-  in `papers.bib`; nothing renders it now.
+  in `papers.bib`; nothing renders it now. The file is kept byte-faithful to the gem apart
+  from those two edits, so it is listed in `.prettierignore` — CI installs a newer Prettier
+  than the lockfile pins, and letting either one reformat it makes gem diffs unreadable.
 - `assets/css/main.scss` — a copy of the gem's 33-line entry file plus one appended block
   setting the system font stack. The theme puts `font-family: Roboto; font-weight: 300` on
   `body` in `tailwind.css`, and `main.css` loads after it, so the override wins. The Google
