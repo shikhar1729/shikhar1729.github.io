@@ -14,9 +14,9 @@ cv:
 
   sections:
     Summary:
-      - AI safety and interpretability researcher working on chain-of-thought faithfulness,
-        steganographic reasoning, and the monitorability of large language models.
-        Machine Learning Engineer at Apple; Pivotal Research Fellow and MARS V Research Fellow.
+      - bullet: AI safety and interpretability researcher working on chain-of-thought faithfulness,
+          steganographic reasoning, and the monitorability of large language models.
+          Machine Learning Engineer at Apple; Pivotal Research Fellow and MARS V Research Fellow.
 
     Research Fellowships:
       - name: Pivotal Research Fellow
@@ -229,7 +229,7 @@ cv:
       - label: Systems and Infrastructure
         details: Kubernetes, Docker, Airflow, FastAPI, Django/Flask, NodeJS, ReactJS, MySQL, InfluxDB, Jenkins
 
-    Awards:
+    Awards and Honors:
       - label: Pivotal Research Fellowship
         details: Selected from 2,500+ applicants, plus a merit-based extension (2026)
       - label: MARS V Fellowship
