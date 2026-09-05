@@ -10,7 +10,7 @@
         "description": "Research, fellowships, industry experience, and education. The PDF is rendered automatically from <code>_data/cv.yml</code> by the RenderCV GitHub Action.",
         "headline": "cv",
         
-        "sameAs": [null,"https://scholar.google.com/citations?user=RvNitH0AAAAJ","https://github.com/shikhar1729","https://www.linkedin.com/in/shikhar-shiromani","https://arxiv.org/a/.html"],
+        "sameAs": [null,"https://scholar.google.com/citations?user=RvNitH0AAAAJ","https://github.com/shikhar1729","https://www.linkedin.com/in/shikhar-shiromani"],
         
         "name": "Shikhar Shiromani",
         "@context": "https://schema.org"
@@ -41,7 +41,7 @@ ninja.data = [{
     },
   },{id: "nav-publications",
           title: "publications",
-          description: "In reverse chronological order. Also on Google Scholar.",
+          description: "In reverse chronological order.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -81,9 +81,6 @@ ninja.data = [{
           section: "News",},{id: "news-two-papers-at-icml-2026-in-seoul-the-pluralistic-alignment-benchmark-pluralistic-alignment-workshop-and-where-reliability-lives-in-vlms-mechanistic-interpretability-workshop",
           title: 'Two papers at ICML 2026 in Seoul: the Pluralistic Alignment Benchmark (Pluralistic Alignment...',
           description: "",
-          section: "News",},{id: "news-new-preprint-a-false-average-shows-chain-of-thought-monitors-collapse-from-95-to-under-11-catch-rate-exactly-where-they-are-the-only-defense",
-          title: 'New preprint: A False Average shows chain-of-thought monitors collapse from ~95% to under...',
-          description: "",
           section: "News",},{id: "news-elevated-to-ieee-senior-member-the-highest-grade-available-by-application",
           title: 'Elevated to IEEE Senior Member, the highest grade available by application.',
           description: "",
@@ -121,20 +118,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("https://www.linkedin.com/in/shikhar-shiromani", "_blank");
-        },
-      },{
-        id: 'social-arxiv',
-        title: 'arXiv',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://arxiv.org/a/.html", "_blank");
-        },
-      },{
-        id: 'social-rss',
-        title: 'RSS Feed',
-        section: 'Socials',
-        handler: () => {
-          window.open("/feed.xml", "_blank");
         },
       },{
       id: 'light-theme',
