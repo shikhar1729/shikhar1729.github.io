@@ -1,13 +1,8 @@
 cv:
   name: Shikhar Shiromani
-  label: AI Safety and Interpretability Researcher
+  headline: AI Safety and Interpretability Researcher
   email: rbk.shikhar@gmail.com
   location: San Diego, CA
-  image: ""
-  summary: >-
-    AI safety and interpretability researcher working on chain-of-thought faithfulness,
-    steganographic reasoning, and the monitorability of large language models.
-    Machine Learning Engineer at Apple; Pivotal Research Fellow and MARS V Research Fellow.
 
   social_networks:
     - network: GitHub
@@ -18,6 +13,11 @@ cv:
       username: RvNitH0AAAAJ
 
   sections:
+    Summary:
+      - AI safety and interpretability researcher working on chain-of-thought faithfulness,
+        steganographic reasoning, and the monitorability of large language models.
+        Machine Learning Engineer at Apple; Pivotal Research Fellow and MARS V Research Fellow.
+
     Research Fellowships:
       - name: Pivotal Research Fellow
         summary: Chain-of-thought faithfulness in LLMs, Pivotal Research (London)

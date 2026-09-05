@@ -76,6 +76,18 @@ The two committing workflows need Settings → Actions → Workflow permissions 
 fail quietly — Scholar rate-limits, and a failed run just leaves the old counts in place.
 README-only changes do not trigger a deploy; `CLAUDE.md` is excluded from the Jekyll build.
 
+`_data/cv.yml` is a **RenderCV** document, not JSON Resume. RenderCV sets
+`additionalProperties: false`, so an unknown key fails the render with a validation error
+rather than being ignored. The only keys allowed beside `cv:` are `name`, `headline`,
+`location`, `email`, `photo`, `phone`, `website`, `social_networks`, `custom_connections`
+and `sections`. There is no `label`, `summary` or `image` — a headline goes in `headline`,
+and prose goes in a section as a list of plain strings. Validate before pushing:
+
+```bash
+curl -sSLO https://raw.githubusercontent.com/rendercv/rendercv/main/schema.json
+python -c "import json,yaml,jsonschema;jsonschema.Draft202012Validator(json.load(open('schema.json'))).validate(yaml.safe_load(open('_data/cv.yml')))"
+```
+
 ## Where things live
 
 | Change                                     | File                                                     |
