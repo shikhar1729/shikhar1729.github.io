@@ -1,61 +1,56 @@
-# shikharshiromani.com
+# shikhar1729.github.io
 
 Personal research website. Built with [Jekyll](https://jekyllrb.com/) and the
 [al-folio](https://github.com/alshedivat/al-folio) theme, deployed to GitHub Pages
 by GitHub Actions.
 
----
-
-## Before your first push: change these five things
-
-| # | File | Line | Change to |
-|---|------|------|-----------|
-| 1 | `_config.yml` | `url:` | `https://yourdomain.com` (or `https://YOURUSERNAME.github.io` if you skip the custom domain) |
-| 2 | `_config.yml` | `baseurl:` | Leave **blank** for a custom domain or a `<user>.github.io` repo. Only set it (e.g. `/website`) if the site lives in a project repo without a custom domain. |
-| 3 | `CNAME` | whole file | Your domain, no `https://`, no trailing slash. **Delete this file entirely if you are not using a custom domain.** |
-| 4 | `_data/socials.yml` | `github_username:` | Your GitHub username |
-| 5 | `_data/cv.yml` | `social_networks` → GitHub `username:` | Your GitHub username |
-
-Then replace `assets/img/prof_pic.jpg` with a real photo (square, ~600x600 or larger).
+Live at **https://shikhar1729.github.io**.
 
 ---
 
-## Deploying
+## How deployment works
 
-1. Create a repo named **`YOURUSERNAME.github.io`** (for a personal site) and push this directory to `main`.
-2. Repo → **Settings → Pages** → set **Source** to **Deploy from a branch**, branch **`gh-pages`**, folder `/ (root)`.
-   The `Deploy site` Action builds to the `gh-pages` branch on every push to `main`.
-3. Repo → **Settings → Actions → General** → **Workflow permissions** → **Read and write permissions**.
-   The deploy and CV-render actions both commit back to the repo.
-4. Wait for the first Action run to go green, then check `https://YOURUSERNAME.github.io`.
+Push to `main`. The `Deploy site` Action builds the site and pushes `_site` to the
+`gh-pages` branch, which GitHub Pages serves. Nothing else to run.
 
-### Custom domain
+Two repo settings make that work, and they are already set:
 
-At your registrar, point the apex domain at GitHub's four Pages IPs:
+- **Settings → Pages** → Source: _Deploy from a branch_, branch `gh-pages`, folder `/ (root)`.
+- **Settings → Actions → General** → Workflow permissions: **Read and write**. The deploy,
+  CV-render, and citation Actions all commit back to the repo.
+
+### Moving to a custom domain later
+
+1. Create a `CNAME` file containing the bare domain — no `https://`, no trailing slash.
+2. Set `url:` in `_config.yml` to `https://thatdomain`. Leave `baseurl:` blank.
+3. At your registrar, point the apex domain at GitHub's four Pages IPs:
 
 ```
 A    @    185.199.108.153
 A    @    185.199.109.153
 A    @    185.199.110.153
 A    @    185.199.111.153
-CNAME www  YOURUSERNAME.github.io.
+CNAME www  shikhar1729.github.io.
 ```
 
-Then in **Settings → Pages**, enter the domain and tick **Enforce HTTPS** once the certificate provisions (a few minutes to an hour).
+4. In **Settings → Pages**, enter the domain and tick **Enforce HTTPS** once the certificate
+   provisions (a few minutes to an hour).
+
+GitHub then redirects `shikhar1729.github.io` to the new domain, so existing links keep working.
 
 ---
 
 ## Editing content
 
-| What | Where |
-|------|-------|
-| Bio and landing page | `_pages/about.md` |
-| Publications | `_bibliography/papers.bib` — set `selected={true}` to surface a paper on the landing page |
-| CV (and the CV PDF) | `_data/cv.yml` — the `Render a CV` Action regenerates `assets/rendercv/rendercv_output/Shikhar_Shiromani_CV.pdf` on every push that touches it |
-| News items | `_news/*.md` — one file per item, filename date sorts them |
-| Service, reviewing, awards | `_pages/service.md` |
-| Blog posts | `_posts/*.md`. The `notes` page is at `/notes/` but hidden from the navbar; set `nav: true` in `_pages/blog.md` to show it |
-| Site title, socials, nav | `_config.yml`, `_data/socials.yml` |
+| What                       | Where                                                                                                                                          |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bio and landing page       | `_pages/about.md`                                                                                                                              |
+| Publications               | `_bibliography/papers.bib` — set `selected={true}` to surface a paper on the landing page                                                      |
+| CV (and the CV PDF)        | `_data/cv.yml` — the `Render a CV` Action regenerates `assets/rendercv/rendercv_output/Shikhar_Shiromani_CV.pdf` on every push that touches it |
+| News items                 | `_news/*.md` — one file per item, filename date sorts them                                                                                     |
+| Service, reviewing, awards | `_pages/service.md`                                                                                                                            |
+| Blog posts                 | `_posts/*.md`. The `notes` page is at `/notes/` but hidden from the navbar; set `nav: true` in `_pages/blog.md` to show it                     |
+| Site title, socials, nav   | `_config.yml`, `_data/socials.yml`                                                                                                             |
 
 ### Adding a paper
 
