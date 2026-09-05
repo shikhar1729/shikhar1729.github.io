@@ -24,7 +24,7 @@ cv:
         start_date: 2026-02
         end_date: present
         highlights:
-          - Selected as a Research Fellow from 2,500+ applicants; awarded a merit-based extension in March 2026.
+          - Awarded a merit-based extension in March 2026.
           - Working with Noah Y. Siegel (Google DeepMind, UK) on chain-of-thought faithfulness.
           - Showed CoT monitors collapse from ~95% to under 11% catch rate on the subset where the reasoning trace is the only signal, and that the attack transfers across monitor families and agent models.
 
@@ -33,7 +33,6 @@ cv:
         start_date: 2026-07
         end_date: present
         highlights:
-          - Selected as one of 86 fellows from 1,733 applications (approximately 5%).
           - Working with Julian Schulz on how LLMs hide chain-of-thought in text.
           - Evidence for a distributed mechanism that transfers across encoding schemes by reusing the same weights.
 
@@ -41,8 +40,6 @@ cv:
         summary: Attention Consistency Training for Safety, Kairos
         start_date: 2026-02
         end_date: 2026-05
-        highlights:
-          - Accepted from a round of nearly 2,500 applications.
 
     Research:
       - name: The Hypocrisy Gap - Internal Belief vs. CoT via Sparse Autoencoders
@@ -196,7 +193,7 @@ cv:
         start_date: 2026-06
         end_date: 2026-06
         highlights:
-          - Highest IEEE grade available by application, held by approximately 10% of members.
+          - Elevated to Senior Member grade in June 2026.
 
       - name: Patent Pending (first author)
         summary: Machine Learning-Based Anomaly Detection Using Data Center Metrics
@@ -215,11 +212,11 @@ cv:
 
     Awards and Honors:
       - label: Pivotal Research Fellowship
-        details: Selected from 2,500+ applicants, plus a merit-based extension (2026)
+        details: Pivotal Research, London; merit-based extension (2026)
       - label: MARS V Fellowship
-        details: 86 selected from 1,733 applications, approximately 5% (2026)
+        details: Meridian, Cambridge, UK (2026)
       - label: SPAR Fellowship
-        details: Kairos, from a round of nearly 2,500 applications (2026)
+        details: Kairos (2026)
       - label: IEEE Senior Member
         details: Elevated June 2026
       - label: SMART 20 Awards 2025

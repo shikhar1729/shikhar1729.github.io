@@ -2,15 +2,12 @@
 layout: about
 title: about
 permalink: /
-subtitle: AI safety and interpretability research. Machine Learning Engineer at <a href="https://www.apple.com">Apple</a>.
+subtitle: Machine Learning Engineer at <a href="https://www.apple.com">Apple</a>. Independent research on AI safety and interpretability.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
-  more_info: >
-    <p>San Diego, California</p>
-    <p><a href="mailto:rbk.shikhar@gmail.com">rbk.shikhar@gmail.com</a></p>
 
 selected_papers: true
 social: false
@@ -26,22 +23,20 @@ latest_posts:
   limit: 3
 ---
 
-I work on whether we can trust what a language model says about its own reasoning.
+I am a Machine Learning Engineer at [Apple](https://www.apple.com), where I work on power and
+performance across Apple's operating systems.
 
-When a model explains an answer, that explanation may or may not reflect the computation
-that produced it. I build measurements for that gap, and I study what happens to our safety
-tools when it widens.
+Separately, in a personal capacity, I study AI safety and interpretability. The question I keep
+returning to is whether we can trust what a language model says about its own reasoning. When a
+model explains an answer, that explanation may or may not reflect the computation that produced
+it. I work on ways to measure that gap.
 
-Right now I am a **Pivotal Research Fellow**, working with Noah Y. Siegel at Google DeepMind
-on chain-of-thought faithfulness, and a **MARS V Research Fellow** at Meridian, working with
-Julian Schulz on steganographic reasoning. Earlier in 2026 I was a **SPAR Fellow** at Kairos,
-on attention consistency training for safety.
+I am a **Pivotal Research Fellow**, working with Noah Y. Siegel at Google DeepMind on
+chain-of-thought faithfulness, and a **MARS V Research Fellow** at Meridian, working with Julian
+Schulz on steganographic reasoning. Earlier in 2026 I was a **SPAR Fellow** at Kairos. Before
+Apple I spent six years at NVIDIA, across systems, infrastructure, and ML research.
 
-By day I am a Machine Learning Engineer at [Apple](https://www.apple.com), working on power
-and performance across Apple's operating systems. Before that, six years at NVIDIA across
-systems, infrastructure, and ML research.
-
-If you work on faithfulness, monitorability, or evaluation, get in touch.
+If you work on faithfulness, monitorability, or evaluation, I would be glad to hear from you.
 
 <p style="margin-top: 2rem; font-size: 0.9rem; letter-spacing: 0.02em;">
   <a href="mailto:rbk.shikhar@gmail.com">email</a> &nbsp;·&nbsp;
@@ -49,4 +44,9 @@ If you work on faithfulness, monitorability, or evaluation, get in touch.
   <a href="https://github.com/shikhar1729">github</a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/shikhar-shiromani">linkedin</a> &nbsp;·&nbsp;
   <a href="/assets/rendercv/rendercv_output/Shikhar_Shiromani_CV.pdf">cv</a>
+</p>
+
+<p style="margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.7;">
+  The research described here is my own, carried out in a personal capacity and outside my work
+  at Apple. Views expressed on this site are mine alone and do not represent my employer.
 </p>
