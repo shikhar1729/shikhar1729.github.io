@@ -45,8 +45,3 @@ If you work on faithfulness, monitorability, or evaluation, I would be glad to h
   <a href="https://www.linkedin.com/in/shikhar-shiromani">linkedin</a> &nbsp;·&nbsp;
   <a href="/assets/rendercv/rendercv_output/Shikhar_Shiromani_CV.pdf">cv</a>
 </p>
-
-<p style="margin-top: 1.5rem; font-size: 0.8rem; opacity: 0.7;">
-  The research described here is my own, carried out in a personal capacity and outside my work
-  at Apple. Views expressed on this site are mine alone and do not represent my employer.
-</p>
