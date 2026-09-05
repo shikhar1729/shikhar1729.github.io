@@ -42,15 +42,15 @@ GitHub then redirects `shikhar1729.github.io` to the new domain, so existing lin
 
 ## Editing content
 
-| What                       | Where                                                                                                                                          |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bio and landing page       | `_pages/about.md`                                                                                                                              |
-| Publications               | `_bibliography/papers.bib` — set `selected={true}` to surface a paper on the landing page                                                      |
-| CV (and the CV PDF)        | `_data/cv.yml` — the `Render a CV` Action regenerates `assets/rendercv/rendercv_output/Shikhar_Shiromani_CV.pdf` on every push that touches it |
-| News items                 | `_news/*.md` — one file per item, filename date sorts them                                                                                     |
-| Service, reviewing, awards | `_pages/service.md`                                                                                                                            |
-| Blog posts                 | `_posts/*.md`. The `notes` page is at `/notes/` but hidden from the navbar; set `nav: true` in `_pages/blog.md` to show it                     |
-| Site title, socials, nav   | `_config.yml`, `_data/socials.yml`                                                                                                             |
+| What                       | Where                                                                                                                      |
+| -------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| Bio and landing page       | `_pages/about.md`                                                                                                          |
+| Publications               | `_bibliography/papers.bib` — set `selected={true}` to surface a paper on the landing page                                  |
+| CV                         | `assets/pdf/Shikhar_Shiromani_CV.pdf` — replace the file; nothing generates it                                             |
+| News items                 | `_news/*.md` — one file per item, filename date sorts them                                                                 |
+| Service, reviewing, awards | `_pages/service.md`                                                                                                        |
+| Blog posts                 | `_posts/*.md`. The `notes` page is at `/notes/` but hidden from the navbar; set `nav: true` in `_pages/blog.md` to show it |
+| Site title, socials, nav   | `_config.yml`, `_data/socials.yml`                                                                                         |
 
 ### Adding a paper
 

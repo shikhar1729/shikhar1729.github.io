@@ -43,5 +43,5 @@ If you work on faithfulness, monitorability, or evaluation, I would be glad to h
   <a href="https://scholar.google.com/citations?user=RvNitH0AAAAJ">scholar</a> &nbsp;·&nbsp;
   <a href="https://github.com/shikhar1729">github</a> &nbsp;·&nbsp;
   <a href="https://www.linkedin.com/in/shikhar-shiromani">linkedin</a> &nbsp;·&nbsp;
-  <a href="/assets/rendercv/rendercv_output/Shikhar_Shiromani_CV.pdf">cv</a>
+  <a href="/assets/pdf/Shikhar_Shiromani_CV.pdf">cv</a>
 </p>

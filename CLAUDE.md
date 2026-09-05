@@ -18,8 +18,7 @@ bin/setup-python-deps              # jupyter + nbconvert, only for jekyll-jupyte
 npm ci && npm run lint:prettier    # the Prettier action runs this on every push and PR
 npm run format                     # prettier . --write — run before pushing
 
-# Reproduce the two committing Actions locally (both need `pip install -r requirements.txt`)
-rendercv render _data/cv.yml --settings assets/rendercv/settings.yaml
+# Reproduce the citation Action locally (needs `pip install -r requirements.txt`)
 python bin/update_scholar_citations.py
 ```
 
@@ -64,29 +63,16 @@ fixes are load-bearing:
 
 ## Actions
 
-| Workflow               | Trigger                                                  | Effect                                                              |
-| ---------------------- | -------------------------------------------------------- | ------------------------------------------------------------------- |
-| `deploy.yml`           | push to `main` touching content/assets/config            | builds and pushes `_site` to `gh-pages`                             |
-| `prettier.yml`         | every push and PR                                        | `prettier --check`; on failure uploads an HTML diff                 |
-| `render-cv.yml`        | push touching `_data/cv.yml` or `assets/rendercv/*.yaml` | regenerates the CV PDF and **commits it back**                      |
-| `update-citations.yml` | cron Mon/Wed/Fri                                         | rewrites `_data/citations.yml` from Scholar and **commits it back** |
+| Workflow               | Trigger                                       | Effect                                                              |
+| ---------------------- | --------------------------------------------- | ------------------------------------------------------------------- |
+| `deploy.yml`           | push to `main` touching content/assets/config | builds and pushes `_site` to `gh-pages`                             |
+| `prettier.yml`         | every push and PR                             | `prettier --check`; on failure uploads an HTML diff                 |
+| `update-citations.yml` | cron Mon/Wed/Fri                              | rewrites `_data/citations.yml` from Scholar and **commits it back** |
 
-The two committing workflows need Settings → Actions → Workflow permissions set to
-**Read and write**. `update-citations.yml` is capped at a 90-second timeout and is allowed to
+`update-citations.yml` commits back to the repo, so Settings → Actions → Workflow
+permissions must stay on **Read and write**. `update-citations.yml` is capped at a 90-second timeout and is allowed to
 fail quietly — Scholar rate-limits, and a failed run just leaves the old counts in place.
 README-only changes do not trigger a deploy; `CLAUDE.md` is excluded from the Jekyll build.
-
-`_data/cv.yml` is a **RenderCV** document, not JSON Resume. RenderCV sets
-`additionalProperties: false`, so an unknown key fails the render with a validation error
-rather than being ignored. The only keys allowed beside `cv:` are `name`, `headline`,
-`location`, `email`, `photo`, `phone`, `website`, `social_networks`, `custom_connections`
-and `sections`. There is no `label`, `summary` or `image` — a headline goes in `headline`,
-and prose goes in a section as a list of plain strings. Validate before pushing:
-
-```bash
-curl -sSLO https://raw.githubusercontent.com/rendercv/rendercv/main/schema.json
-python -c "import json,yaml,jsonschema;jsonschema.Draft202012Validator(json.load(open('schema.json'))).validate(yaml.safe_load(open('_data/cv.yml')))"
-```
 
 ## Where things live
 
@@ -95,13 +81,19 @@ python -c "import json,yaml,jsonschema;jsonschema.Draft202012Validator(json.load
 | Bio / landing page                         | `_pages/about.md`                                        |
 | Publications                               | `_bibliography/papers.bib`                               |
 | Reviewing, awards, mentorship, fellowships | `_pages/service.md`                                      |
-| CV content (drives the generated CV PDF)   | `_data/cv.yml`                                           |
+| CV                                         | `assets/pdf/Shikhar_Shiromani_CV.pdf` (hand-maintained)  |
 | News items                                 | `_news/YYYY-MM-DD-slug.md`, one per item, `inline: true` |
 | Socials, Scholar ID, CV link               | `_data/socials.yml`                                      |
 | Venue colors and links for `abbr` badges   | `_data/venues.yml`                                       |
 
 `_posts/` does not exist yet, so the `/notes/` blog page (`_pages/blog.md`) is empty and
 hidden from the navbar. Set `nav: true` there once the first post lands.
+
+`/cv/` is a redirect, not a rendered page. `_pages/cv.md` sends the visitor straight to
+`assets/pdf/Shikhar_Shiromani_CV.pdf`. To update the CV, replace that one file — nothing
+generates it. The RenderCV pipeline (`_data/cv.yml`, `assets/rendercv/`, `render-cv.yml`)
+was removed on purpose; do not reintroduce it. `al_folio.features.cv` is off, and the
+`al_folio_cv` gem stays in the Gemfile only because it is unused rather than harmful.
 
 ## Rules that matter
 
@@ -157,19 +149,11 @@ short, it is the landing page, and the site is deliberately sparse.
 
 ## Theme gotchas found the hard way
 
-- **`_data/cv.yml` serves two masters and they disagree.** RenderCV forbids `label`,
-  `summary` and `image` at the `cv:` level (see above), but the gem's `cv/render.liquid`
-  reads exactly `cv.label` and `cv.summary` for its header. RenderCV wins, because it fails
-  the build; the web CV page simply loses those two rows.
 - **The gem's generic section renderer only handles `bullet` and `label` entries.** A
   RenderCV `NormalEntry` (`name` / `summary` / `highlights`) validates fine and renders in
   the PDF, but produces an _empty card_ on `/cv/`. Research Fellowships, Research, and
   Service and Mentorship are empty on the web page for this reason. Use `bullet:` for prose
   and `label:`/`details:` for one-liners when the web page matters more than PDF structure.
-- **A section named `Awards` is routed to `cv/awards.liquid`**, which expects JSON Resume
-  fields (`title`, `awarder`, `date`). With `label`/`details` entries it emits empty rows.
-  The section is named `Awards and Honors` to dodge the name match and hit the generic
-  renderer instead. `Honors and Awards` is also matched — do not use it.
 - **An empty key in `_data/socials.yml` still renders a link.** `arxiv_id:` with no value
   produced a broken `https://arxiv.org/a/.html` icon, and `rss_icon: false` still rendered
   the feed icon. Delete the key outright rather than blanking it.
@@ -182,6 +166,5 @@ short, it is the landing page, and the site is deliberately sparse.
 
 ## Still to fill in
 
-`YOURUSERNAME` in `_data/socials.yml` and `_data/cv.yml`; `url:` in `_config.yml`; the `CNAME`
-file (still `yourdomain.com`); and `assets/img/prof_pic.jpg` is a placeholder monogram, not a
+`assets/img/prof_pic.jpg` is a placeholder monogram, not a
 photo. `giscus.repo` is empty, so post comments are inert until it is set.

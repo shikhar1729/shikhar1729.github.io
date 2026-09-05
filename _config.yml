@@ -71,7 +71,7 @@ al_folio:
     allow_remote_loader: false
   features:
     cv:
-      enabled: true
+      enabled: false # CV is a hand-maintained PDF, not generated from _data/cv.yml
     distill:
       enabled: true
   compat:
