@@ -147,6 +147,20 @@ Any key listed in `filtered_bibtex_keywords` (`_config.yml`) is consumed by the 
 hidden from the rendered BibTeX. Four entries are currently `selected` — keep that list
 short, it is the landing page, and the site is deliberately sparse.
 
+## Local overrides of gem files
+
+Two gem files are shadowed here. Both carry a header comment saying what changed. Re-apply
+after an `al_folio_core` upgrade, or delete the file to fall back to stock:
+
+- `_includes/bib.liquid` — drops the literal `In ` before `booktitle`, and drops the
+  `abbr` venue badge that used to sit above the publication thumbnail. `abbr` is still set
+  in `papers.bib`; nothing renders it now.
+- `assets/css/main.scss` — a copy of the gem's 33-line entry file plus one appended block
+  setting the system font stack. The theme puts `font-family: Roboto; font-weight: 300` on
+  `body` in `tailwind.css`, and `main.css` loads after it, so the override wins. The Google
+  Fonts link in `head.liquid` is unconditional, so Roboto is still fetched and unused;
+  removing it would mean shadowing `head.liquid` too, which is not worth it.
+
 ## Theme gotchas found the hard way
 
 - **The gem's generic section renderer only handles `bullet` and `label` entries.** A

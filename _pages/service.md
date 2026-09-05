@@ -2,28 +2,31 @@
 layout: page
 permalink: /service/
 title: service
-description: Peer review, fellowships, and professional recognition.
+description: Peer review, fellowships, patents, and recognition.
 nav: true
 nav_order: 3
 ---
 
 ## Peer review
 
-Twelve completed reviews, recorded on OpenReview.
+Served as a reviewer at:
 
-- Efficient Reasoning Workshop, NeurIPS 2025 — 3 reviews
-- Efficient Reasoning Workshop, COLM 2026 — 5 reviews
-- BlackboxNLP 2026 at EMNLP, Budapest — 4 reviews
-- InterpScience 2026 at NeurIPS — reviewer pool
-- Pluralistic Alignment Workshop, ICML 2026 — invited
+- [Efficient Reasoning Workshop](https://efficient-reasoning.github.io/), NeurIPS 2025
+- Efficient Reasoning Workshop, COLM 2026
+- [BlackboxNLP](https://blackboxnlp.github.io/), EMNLP 2026, Budapest
+- [Interpretability as a Science](https://interpscience.github.io/), NeurIPS 2026
+- [Pluralistic Alignment Workshop](https://pluralistic-alignment.github.io/), ICML 2026
 
 ## Fellowships
 
-- Pivotal Research Fellowship — Pivotal Research, London (2026)
-- MARS V — Meridian, Cambridge, UK (2026)
-- SPAR — Kairos (Spring 2026)
+- **Pivotal Research Fellowship**, London (2026) — chain-of-thought faithfulness, with Noah Y. Siegel at Google DeepMind.
+- **MARS V**, Meridian, Cambridge (2026) — steganographic reasoning in language models, with Julian Schulz.
+- **SPAR**, Kairos (Spring 2026) — attention consistency training for safety.
+
+## Patents
+
+- Machine Learning-Based Anomaly Detection Using Data Center Metrics — filed March 2025
 
 ## Recognition
 
 - IEEE Senior Member, elevated June 2026
-- Patent pending, first author — _Machine Learning-Based Anomaly Detection Using Data Center Metrics_, filed March 2025
