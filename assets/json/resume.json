@@ -1,0 +1,25 @@
+{
+  "basics": {
+    "name": "Shikhar Shiromani",
+    "label": "AI Safety and Interpretability Researcher",
+    "email": "rbk.shikhar@gmail.com",
+    "url": "https://yourdomain.com",
+    "summary": "AI safety and interpretability researcher working on chain-of-thought faithfulness, steganographic reasoning, and the monitorability of large language models.",
+    "location": { "city": "San Diego", "region": "California", "countryCode": "US" },
+    "profiles": [
+      { "network": "Google Scholar", "url": "https://scholar.google.com/citations?user=RvNitH0AAAAJ&hl=en" },
+      { "network": "LinkedIn", "username": "shikhar-shiromani", "url": "https://www.linkedin.com/in/shikhar-shiromani" }
+    ]
+  },
+  "work": [],
+  "education": [],
+  "publications": [],
+  "projects": [],
+  "volunteer": [],
+  "awards": [],
+  "certificates": [],
+  "skills": [],
+  "languages": [],
+  "interests": [],
+  "references": []
+}

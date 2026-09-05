@@ -1,0 +1,197 @@
+---
+---
+
+@misc{shiromani2026falseaverage,
+  abbr        = {Preprint},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {A False Average: Chain-of-Thought Monitors Collapse Where They Are the Only Defense},
+  author      = {Shiromani, Shikhar and Richter, Leo},
+  year        = {2026},
+  month       = {August},
+  eprint      = {2608.00583},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv       = {2608.00583},
+  url         = {https://arxiv.org/abs/2608.00583},
+  additional_info = {Pivotal Research Fellowship. Under review at BlackboxNLP 2026.},
+  abstract    = {Chain-of-thought (CoT) monitoring is meant to catch the reward hacks that look clean in the actions and betray themselves only in the reasoning. We show that this is exactly where an adversary who controls the reasoning can defeat it. Rewriting only an agent's reasoning to read as good-faith engineering, while copying every command and output verbatim so the exploit is unchanged, drops a held-out monitor's catch rate on that subset from about 95% to under 11% in one gradient-free shot. A monitor's aggregate accuracy is a false average: dominated by hacks the actions give away, it hides the near-total collapse this rewrite produces on the subset where CoT monitoring is the only signal. The attack transfers across monitor families and agent models, and reproduces with live agents. Trace-only defenses recover it only partially, because the rewrite stays truthful about what happened and lies only about intent; only information from outside the trace helps substantially.}
+}
+
+@inproceedings{chaudhury2026pab,
+  abbr        = {ICML-W},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {Benchmarking Pluralistic Alignment Through Persona-Conditioned Behavioral Evaluation},
+  author      = {Chaudhury, Archie and Shiromani, Shikhar and Mehta, Ayushi},
+  booktitle   = {Pluralistic Alignment Workshop at ICML 2026, Seoul},
+  year        = {2026},
+  month       = {July},
+  abstract    = {We introduce the Pluralistic Alignment Benchmark (PAB), covering 320 scenarios, 8 behavioral-risk categories, and 63 synthetic personas. Evaluating 9 leading LLMs with a multi-judge pipeline reveals substantial persona-conditioned drift in manipulation, concealment, persuasion, and sycophancy.}
+}
+
+@inproceedings{mann2026visualslie,
+  abbr        = {ICLR-W},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {Visuals Lie, Consistency Speaks: Disentangling Spatial Attention from Reliability in Vision-Language Models},
+  author      = {Mann, Logan and Xia, Yi and Saravanan, Ajit and Dave, Ishan and Ismail, Saadullah and Shiromani, Shikhar and Huang, Emily and Li, Ruizhe and Zhu, Kevin},
+  booktitle   = {Workshop on Multimodal Intelligence at ICLR 2026, Rio de Janeiro},
+  year        = {2026},
+  month       = {April},
+  eprint      = {2606.17389},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  arxiv       = {2606.17389},
+  url         = {https://arxiv.org/abs/2606.17389},
+  abstract    = {A common intuition, which we call the Attention-Confidence Assumption, holds that reliability follows from structural visual perception. We challenge this through the VLM Reliability Probe (VRP), a cross-family study of reliability signals in contemporary VLMs. Spatial attention has near-zero correlation with accuracy, while self-consistency is the dominant predictor of truth. Scaling causal interventions exposes a sharp architectural divergence between late-fusion and early-fusion families.}
+}
+
+@article{mann2026reliabilitylives,
+  abbr        = {ICML-W},
+  bibtex_show = {true},
+  title       = {Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits},
+  author      = {Mann, Logan and Saravanan, Ajit and Dave, Ishan and Shiromani, Shikhar and Ismail, Saadullah and Xia, Yi and Huang, Emily},
+  journal     = {Mechanistic Interpretability Workshop at ICML 2026, Seoul},
+  year        = {2026},
+  month       = {July},
+  eprint      = {2605.08200},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv       = {2605.08200},
+  url         = {https://arxiv.org/abs/2605.08200},
+  abstract    = {We instrument three open-weight VLM families with a unified mechanistic pipeline that compares attention structure, generation dynamics, and hidden-state geometry against a single correctness label. Attention structure is a near-zero predictor of correctness, reliability becomes legible later in the computation, and causal neuron-level ablations expose a sharp architectural split with direct monitor-design implications.}
+}
+
+@inproceedings{shaikh2026linearheads,
+  abbr        = {ACL-W},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {Linear Predictability of Attention Heads in Large Language Models},
+  author      = {Shaikh, Khalid and Singh, Asmit Kumar and Dsouza, Rebecca Christopher and Shiromani, Shikhar},
+  booktitle   = {SELVA Workshop at ACL 2026, San Diego (Oral, 1 of 4)},
+  year        = {2026},
+  month       = {July},
+  award       = {Oral, one of four selected},
+  eprint      = {2603.13314},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv       = {2603.13314},
+  url         = {https://arxiv.org/abs/2603.13314},
+  abstract    = {We show that pretrained Transformers exhibit a pervasive inter-head linear structure: the QKV vectors of an attention head can often be reconstructed as a linear combination of a small number of peer heads. This predictability is learned rather than architectural, rising during pretraining. We exploit the redundancy by caching only reference-head KV states and reconstructing the rest on the fly, achieving 2x KV-cache reduction with model-dependent accuracy trade-offs.}
+}
+
+@inproceedings{thomas2025promoral,
+  abbr        = {NeurIPS-W},
+  bibtex_show = {true},
+  title       = {ProMoral-Bench: Evaluating Prompting Strategies for Moral Reasoning and Safety in LLMs},
+  author      = {Subramanian Thomas, Rohan and Shiromani, Shikhar and Chaudhry, Abdullah and Li, Ruizhe and Sharma, Vasu and Zhu, Kevin and Dev, Sunishchal},
+  booktitle   = {PersonaLLM/PersonaNLP Workshop at NeurIPS 2025, Mexico City},
+  year        = {2025},
+  month       = {December},
+  eprint      = {2602.13274},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv       = {2602.13274},
+  url         = {https://arxiv.org/abs/2602.13274},
+  abstract    = {We introduce ProMoral-Bench, a unified benchmark evaluating 11 prompting paradigms across four LLM families. Using ETHICS, Scruples, WildJailbreak, and our new robustness test ETHICS-Contrast, we measure performance via the Unified Moral Safety Score. Compact, exemplar-guided scaffolds outperform complex multi-stage reasoning at a lower token cost.}
+}
+
+@article{nasser2026sage,
+  abbr        = {Preprint},
+  bibtex_show = {true},
+  title       = {SAGE: Agentic Framework for Interpretable and Clinically Translatable Computational Pathology Biomarker Discovery},
+  author      = {Almahfouz Nasser, Sahar and Pesantez Borja, Juan Francisco and Liu, Jincheng and Hasan, Tanvir and Wang, Zenghan and Ghosh, Suman and Manandhar, Sandeep and Shiromani, Shikhar and Shah, Twisha and Tokuyama, Naoto and Madabhushi, Anant},
+  year        = {2026},
+  month       = {February},
+  eprint      = {2602.00953},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv       = {2602.00953},
+  url         = {https://arxiv.org/abs/2602.00953},
+  additional_info = {Under review at NeurIPS 2026.},
+  abstract    = {We introduce SAGE (Structured Agentic system for hypothesis Generation and Evaluation), an agentic AI system designed to identify interpretable, engineered pathology biomarkers by grounding them in biological evidence. SAGE integrates literature-anchored reasoning with multimodal data analysis to correlate image-derived features with molecular biomarkers and clinically relevant outcomes.}
+}
+
+@article{shiromani2026hypocrisy,
+  abbr        = {Preprint},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {The Hypocrisy Gap: Quantifying Divergence Between Internal Belief and Chain-of-Thought Explanation via Sparse Autoencoders},
+  author      = {Shiromani, Shikhar and Chaudhury, Archie and Kunda, Sri Pranav},
+  year        = {2026},
+  month       = {January},
+  eprint      = {2602.02496},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv       = {2602.02496},
+  url         = {https://arxiv.org/abs/2602.02496},
+  abstract    = {We introduce the Hypocrisy Gap, a mechanistic metric using Sparse Autoencoders to quantify the divergence between a model's internal reasoning and its final generation. By comparing an internal truth belief, derived via sparse linear probes, to the final generated trajectory in latent space, we detect a model's tendency toward unfaithful behavior. On Gemma, Llama, and Qwen, the method reaches AUROC 0.55-0.74, consistently outperforming a decision-aligned log-probability baseline.}
+}
+
+@inproceedings{sahay2026compass,
+  abbr        = {AAAI-W},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {COMPASS: Context-Modulated PID Attention Steering System for Hallucination Mitigation},
+  author      = {Sahay, Kenji and Pandya, Snigdha and Nagale, Rohan and Lin, Anna and Shiromani, Shikhar and Zhu, Kevin and Dev, Sunishchal},
+  booktitle   = {AAAI 2026 Workshops, Singapore: LaMAS (Oral), FrontierIR, XAI4Science, TrustAgent, AIR-FM},
+  year        = {2026},
+  month       = {January},
+  eprint      = {2511.14776},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  arxiv       = {2511.14776},
+  url         = {https://arxiv.org/abs/2511.14776},
+  award       = {Oral at LaMAS; accepted at five AAAI-26 workshops},
+  abstract    = {COMPASS is a feedback-driven decoding framework that uses a Context Reliance Score to steer attention heads toward provided evidence during generation. Without retraining or multiple passes, it reduces contextual hallucinations by 2.8-5.8 percentage points across HotpotQA, XSum, HaluEval, and RAGTruth.}
+}
+
+@inproceedings{chaudhury2025chameleonbench,
+  abbr        = {ACML},
+  bibtex_show = {true},
+  selected    = {true},
+  title       = {ChameleonBench: Quantifying Alignment Faking in Large Language Models},
+  author      = {Chaudhury, Archie and Shiromani, Shikhar},
+  booktitle   = {The 17th Asian Conference on Machine Learning (Conference Track), PMLR},
+  volume      = {304},
+  pages       = {1006--1021},
+  address     = {Taipei, Taiwan},
+  year        = {2025},
+  month       = {November},
+  award       = {Oral presentation},
+  abstract    = {An 800-prompt benchmark across 8 misbehavior categories with an external judge pipeline for alignment-faking evaluation. Across 6 leading LLMs we observe up to 20% higher harmful response rates in free-form versus test-like settings.}
+}
+
+@inproceedings{azarcon2025lung,
+  abbr        = {ICCSS},
+  bibtex_show = {true},
+  title       = {A Comparative Analysis of Machine Learning Models for Lung Cancer Detection},
+  author      = {Azarcon, John Anthony R. and Costales, Jimmy A. and Shiromani, Shikhar},
+  booktitle   = {8th International Conference on Circuits, Systems and Simulation (ICCSS), IEEE},
+  address     = {Ho Chi Minh City, Vietnam},
+  year        = {2025},
+  month       = {May}
+}
+
+@inproceedings{costales2023blockchain,
+  abbr        = {ICIDCA},
+  bibtex_show = {true},
+  title       = {The Impact of Blockchain Technology to Protect Image and Video Integrity from Identity Theft Using Deepfake Analyzer},
+  author      = {Costales, Jimmy A. and Shiromani, Shikhar and Devaraj, Muthukumar},
+  booktitle   = {International Conference on Innovative Data Communication Technologies and Application (ICIDCA), IEEE},
+  address     = {Uttarakhand, India},
+  year        = {2023},
+  month       = {March}
+}
+
+@inproceedings{nayak2022skin,
+  abbr        = {ICAC3N},
+  bibtex_show = {true},
+  title       = {Improved Deep Learning Framework for Segmenting and Classifying Skin Lesions Using K-Nearest Neighbor Algorithm and Multi-Instance Learning},
+  author      = {Sai P, Kiran and Nayak, Aditya and Shiromani, Shikhar and Hemanth, N. V. D. and Dekhane, Aishwarya and Patel, Nisarg},
+  booktitle   = {4th International Conference on Advances in Computing, Communication Control and Networking (ICAC3N), IEEE},
+  address     = {Greater Noida, India},
+  year        = {2022},
+  month       = {December}
+}
