@@ -116,9 +116,14 @@ Google Scholar had six of the ten wrong. Specifically:
 - ChameleonBench is archival: **PMLR Vol. 304, pp. 1006–1021**.
 - The 2022 skin-lesion paper is **ICAC3N**, not ICACCS.
 
-Work still under review keeps `abbr = {Preprint}` and no `booktitle`. Today that is
-A False Average (BlackboxNLP 2026), SAGE (NeurIPS 2026), and Hypocrisy Gap. Promote an
-entry only when an acceptance actually lands.
+Work still under review keeps `abbr = {Preprint}`, no `booktitle`, and a
+`journal = {arXiv preprint arXiv:NNNN.NNNNN}` line so the entry reads as a preprint rather
+than as an undated item. Today that is SAGE and Hypocrisy Gap. Promote an entry only when an
+acceptance actually lands.
+
+**A False Average is off the site.** It was rejected from BlackboxNLP 2026 and is under
+review elsewhere. The bib entry, its news item and its CV entry were removed in the
+"Trim the site" commit — restore from git history when it lands somewhere, do not retype it.
 
 Of the recent AI-safety work, only ChameleonBench (PMLR) and SELVA are archival; the rest are
 non-archival workshops, so cite those by workshop plus date rather than implying proceedings.
@@ -147,8 +152,33 @@ The three older IEEE papers (ICCSS 2025, ICIDCA 2023, ICAC3N 2022) are archival 
 ```
 
 Any key listed in `filtered_bibtex_keywords` (`_config.yml`) is consumed by the theme and
-hidden from the rendered BibTeX. Seven entries are currently `selected` — keep that list
-short, it is the landing page.
+hidden from the rendered BibTeX. Four entries are currently `selected` — keep that list
+short, it is the landing page, and the site is deliberately sparse.
+
+## Theme gotchas found the hard way
+
+- **`_data/cv.yml` serves two masters and they disagree.** RenderCV forbids `label`,
+  `summary` and `image` at the `cv:` level (see above), but the gem's `cv/render.liquid`
+  reads exactly `cv.label` and `cv.summary` for its header. RenderCV wins, because it fails
+  the build; the web CV page simply loses those two rows.
+- **The gem's generic section renderer only handles `bullet` and `label` entries.** A
+  RenderCV `NormalEntry` (`name` / `summary` / `highlights`) validates fine and renders in
+  the PDF, but produces an _empty card_ on `/cv/`. Research Fellowships, Research, and
+  Service and Mentorship are empty on the web page for this reason. Use `bullet:` for prose
+  and `label:`/`details:` for one-liners when the web page matters more than PDF structure.
+- **A section named `Awards` is routed to `cv/awards.liquid`**, which expects JSON Resume
+  fields (`title`, `awarder`, `date`). With `label`/`details` entries it emits empty rows.
+  The section is named `Awards and Honors` to dodge the name match and hit the generic
+  renderer instead. `Honors and Awards` is also matched — do not use it.
+- **An empty key in `_data/socials.yml` still renders a link.** `arxiv_id:` with no value
+  produced a broken `https://arxiv.org/a/.html` icon, and `rss_icon: false` still rendered
+  the feed icon. Delete the key outright rather than blanking it.
+- **A page `description:` is injected into meta tags, so raw HTML in it breaks out** and
+  leaks as visible text on the page. Keep descriptions plain; put links in the page body.
+  This is why `/publications/` briefly showed `Google Scholar."> Google Scholar.">`.
+- The landing page uses a hand-written text link row instead of the theme's icon row
+  (`social: false` in `_pages/about.md`). The theme's icons are large and not configurable
+  without shadowing gem CSS.
 
 ## Still to fill in
 

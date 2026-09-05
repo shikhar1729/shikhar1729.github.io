@@ -21,10 +21,6 @@ Twelve completed reviews formally recorded on OpenReview, across the following v
 
 Two of these appointments came through unsolicited nomination by program committees, and the COLM 2026 invitation was a repeat invitation from the same organizing committee on the basis of the prior year's reviews.
 
-## Mentorship
-
-**Algoverse** — ML Researcher since July 2025, invited back as a Summer 2026 research mentor.
-
 ## Recognition
 
 **IEEE Senior Member**, elevated June 2026. Senior Member is the highest grade of IEEE membership for which a member may apply, held by roughly ten percent of members, requiring ten years in the profession and five years of significant performance.

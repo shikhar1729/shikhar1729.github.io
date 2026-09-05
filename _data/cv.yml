@@ -45,15 +45,6 @@ cv:
           - Accepted from a round of nearly 2,500 applications.
 
     Research:
-      - name: A False Average - CoT Monitor Collapse
-        summary: arXiv 2608.00583
-        start_date: 2026-05
-        end_date: 2026-08
-        highlights:
-          - Gradient-free rewrite of an agent's reasoning, holding every command and output fixed, drops a held-out monitor's catch rate from ~95% to under 11% on CoT-only hacks.
-          - Demonstrated that aggregate monitor accuracy is a false average that hides near-total collapse on the subset monitors exist to cover.
-          - Trace-only defenses recover it only partially; a probe on an open-weight surrogate monitor's activations separates missed hacks, with a causal control showing this is a detector rather than latent monitor knowledge.
-
       - name: The Hypocrisy Gap - Internal Belief vs. CoT via Sparse Autoencoders
         summary: arXiv 2602.02496
         start_date: 2025-11
@@ -199,13 +190,6 @@ cv:
           - Efficient Reasoning Workshop, NeurIPS 2025 (3 reviews) and COLM 2026 (5 reviews, repeat invitation from the same organizing committee).
           - BlackboxNLP 2026 at EMNLP 2026, Budapest (4 reviews), nominated by the program chair committee.
           - Reviewer pool, InterpScience 2026 at NeurIPS 2026; reviewer invitation, Pluralistic Alignment Workshop at ICML 2026.
-
-      - name: Research Mentor, Algoverse
-        summary: ML Researcher and Summer 2026 mentor
-        start_date: 2025-07
-        end_date: present
-        highlights:
-          - Invited back as a research mentor for the Summer 2026 cohort.
 
       - name: IEEE Senior Member
         summary: Elevated June 2026
