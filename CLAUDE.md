@@ -152,7 +152,7 @@ short, it is the landing page, and the site is deliberately sparse.
 Two gem files are shadowed here. Both carry a header comment saying what changed. Re-apply
 after an `al_folio_core` upgrade, or delete the file to fall back to stock:
 
-- `_includes/bib.liquid` — drops the literal `In ` before `booktitle`, and drops the
+- `_layouts/bib.liquid` — drops the literal `In ` before `booktitle`, and drops the
   `abbr` venue badge that used to sit above the publication thumbnail. `abbr` is still set
   in `papers.bib`; nothing renders it now. The file is kept byte-faithful to the gem apart
   from those two edits, so it is listed in `.prettierignore` — CI installs a newer Prettier

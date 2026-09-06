@@ -8,4 +8,4 @@ _posts/2015-10-20-math.md
 _data/citations.yml
 
 # Vendored copy of al_folio_core's bib.liquid; kept byte-faithful for gem diffs
-_includes/bib.liquid
+_layouts/bib.liquid
