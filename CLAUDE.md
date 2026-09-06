@@ -106,7 +106,6 @@ Google Scholar had six of the ten wrong. Specifically:
 - ProMoral-Bench is **NeurIPS 2025**, not 2026.
 - COMPASS was accepted at **five** AAAI-26 workshops; the oral was LaMAS.
 - ChameleonBench is archival: **PMLR Vol. 304, pp. 1006–1021**.
-- The 2022 skin-lesion paper is **ICAC3N**, not ICACCS.
 
 Work still under review keeps `abbr = {Preprint}`, no `booktitle`, and a
 `journal = {arXiv preprint arXiv:NNNN.NNNNN}` line so the entry reads as a preprint rather
@@ -119,7 +118,9 @@ review elsewhere. The bib entry, its news item and its CV entry were removed in 
 
 Of the recent AI-safety work, only ChameleonBench (PMLR) and SELVA are archival; the rest are
 non-archival workshops, so cite those by workshop plus date rather than implying proceedings.
-The three older IEEE papers (ICCSS 2025, ICIDCA 2023, ICAC3N 2022) are archival proceedings.
+The two older IEEE papers (ICCSS 2025, ICIDCA 2023) are archival proceedings. The 2022
+ICAC3N skin-lesion paper was removed from the site at the author's request; it is in git
+history if it ever needs to come back.
 
 **Do not add self-reported metrics** (citation counts, h-index) to page content. The
 `Update citations` Action populates `_data/citations.yml` from Scholar automatically.
@@ -146,7 +147,7 @@ The three older IEEE papers (ICCSS 2025, ICIDCA 2023, ICAC3N 2022) are archival 
 Any key listed in `filtered_bibtex_keywords` (`_config.yml`) is consumed by the theme and
 hidden from the rendered BibTeX. Seven entries are currently `selected`: every accepted
 conference or workshop paper from 2025 onward. Preprints stay off the landing page, and so do
-the three older IEEE papers, which sit in a different research area.
+the two older IEEE papers, which sit in a different research area.
 
 ## Local overrides of gem files
 
