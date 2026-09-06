@@ -22,8 +22,8 @@ latest_posts:
   limit: 3
 ---
 
-I am a Machine Learning Engineer at [Apple](https://www.apple.com), where I work on improving
-power and performance across Apple's operating systems using machine learning. Before Apple I
+Hi! I am an ML Engineer at [Apple](https://www.apple.com), where I work on improving power and
+performance across Apple's operating systems using intelligent algorithms. Before Apple I
 was at NVIDIA, where I worked on predicting node failures to keep large GPU fleets up, and
 earlier on low-level, low-latency software for autonomous driving.
 
