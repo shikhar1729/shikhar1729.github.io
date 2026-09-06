@@ -23,22 +23,23 @@ latest_posts:
 ---
 
 I am a Machine Learning Engineer at [Apple](https://www.apple.com), where I work on improving
-power and performance across Apple's operating systems using machine learning.
+power and performance across Apple's operating systems using machine learning. Before Apple I
+spent six years at NVIDIA. Most recently I was a tech lead there, building the company's first
+server lifecycle management system and working on predicting node failures to keep large GPU
+fleets up. Earlier I built an ML-driven predictive maintenance system for Blackwell and Hopper
+nodes, and before that a self-serve CI/CD platform and the camera control protocol module used
+in automotive safety assessments.
 
 Outside that, I work on AI safety and mechanistic interpretability. The question I keep
-returning to is whether a model's stated reasoning bears any load. A chain of thought is a
-sequence of tokens sampled from the same distribution as any other output; nothing forces it
-to track the computation that produced the answer. So the interesting question is not whether
-explanations sound plausible, but whether they are causally connected to the mechanism, and
-what our monitoring tools are actually measuring when they are not.
+returning to is whether a model's stated reasoning bears any load. The interesting question is
+not whether an explanation sounds plausible, but whether it is causally connected to the
+mechanism that produced the answer, and what our monitoring tools are actually measuring when
+it is not.
 
 I am a **Pivotal Research Fellow**, working with Noah Y. Siegel at Google DeepMind on
-chain-of-thought faithfulness: when a stated rationale diverges from the features a model
-represents internally, and what that divergence does to monitors built on top of the trace. I
-am also a **MARS V Research Fellow** at Meridian, working with Julian Schulz on steganographic
-reasoning, where the concern is reasoning that is load-bearing but no longer legible in the
-text. Earlier in 2026 I was a **SPAR Fellow** at Kairos. Before Apple I spent six years at
-NVIDIA, across systems, infrastructure, and ML research.
+chain-of-thought faithfulness, and a **MARS V Research Fellow** at Meridian, working with
+Julian Schulz on steganographic reasoning. Earlier in 2026 I was a **SPAR Research Fellow** at
+Kairos, where I worked on attention consistency training.
 
 If you work on faithfulness, monitorability, or evaluation, I would be glad to hear from you.
 

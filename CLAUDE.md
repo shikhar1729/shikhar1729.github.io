@@ -153,8 +153,11 @@ the three older IEEE papers, which sit in a different research area.
 Two gem files are shadowed here. Both carry a header comment saying what changed. Re-apply
 after an `al_folio_core` upgrade, or delete the file to fall back to stock:
 
-- `_layouts/bib.liquid` — drops the literal `In ` before `booktitle`, and drops the
-  `abbr` venue badge that used to sit above the publication thumbnail. `abbr` is still set
+- `_layouts/bib.liquid` — drops the literal `In ` before `booktitle`, drops the `abbr` venue
+  badge that used to sit above the publication thumbnail, and widens the text column from
+  `col-sm-8` to `col-sm-10` so authors and venue each fit on one line. The thumbnail gutter
+  is reserved for every entry, with or without a preview: collapsing it for entries without
+  one left the rows ragged, since some titles started at the margin and others were indented. `abbr` is still set
   in `papers.bib`; nothing renders it now. The file is kept byte-faithful to the gem apart
   from those two edits, so it is listed in `.prettierignore` — CI installs a newer Prettier
   than the lockfile pins, and letting either one reformat it makes gem diffs unreadable.
