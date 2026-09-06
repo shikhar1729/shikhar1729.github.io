@@ -9,3 +9,6 @@ _data/citations.yml
 
 # Vendored copy of al_folio_core's bib.liquid; kept byte-faithful for gem diffs
 _layouts/bib.liquid
+
+# Zero-width payload for the about-page easter egg; Prettier mangles it
+_pages/about.md

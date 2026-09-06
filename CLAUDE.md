@@ -168,6 +168,18 @@ after an `al_folio_core` upgrade, or delete the file to fall back to stock:
   Fonts link in `head.liquid` is unconditional, so Roboto is still fetched and unused;
   removing it would mean shadowing `head.liquid` too, which is not worth it.
 
+## The easter egg
+
+`_pages/about.md` ends with a hidden payload and a small script. A message is encoded one bit
+per character in zero-width spaces (U+200B = 0, U+200C = 1) inside `<span id="trace">`, which
+renders as nothing. The console prints a hint on load, and `reveal()` decodes and prints it.
+The joke is the site's own subject: reasoning carried in the token stream rather than the prose.
+
+`_pages/about.md` is in `.prettierignore` because Prettier rewrites the zero-width run. If you
+edit the prose, edit it by hand and leave the `<span id="trace">` line alone. To change the
+message, re-encode it the same way — one zero-width char per bit of UTF-8 — and to remove the
+egg, delete the comment, the span and the script.
+
 ## Theme gotchas found the hard way
 
 - **The gem's generic section renderer only handles `bullet` and `label` entries.** A
