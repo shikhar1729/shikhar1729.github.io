@@ -64,3 +64,23 @@ h6,
 .desc:empty {
   display: none;
 }
+
+/* Small icon row under the bio on the about page. The theme's own social row is
+   off (`social: false`), because its icons are large and not configurable. */
+.contact-row {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+}
+
+.contact-row a {
+  font-size: 1.05rem;
+  line-height: 1;
+  opacity: 0.65;
+  transition: opacity 0.15s ease;
+}
+
+.contact-row a:hover {
+  opacity: 1;
+}

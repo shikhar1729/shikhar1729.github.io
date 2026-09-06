@@ -40,10 +40,10 @@ Kairos, where I worked on attention consistency training.
 
 If you work on faithfulness, monitorability, or evaluation, I would be glad to hear from you.
 
-<p style="margin-top: 2rem; font-size: 0.9rem; letter-spacing: 0.02em;">
-  <a href="mailto:rbk.shikhar@gmail.com">email</a> &nbsp;·&nbsp;
-  <a href="https://scholar.google.com/citations?user=RvNitH0AAAAJ">scholar</a> &nbsp;·&nbsp;
-  <a href="https://github.com/shikhar1729">github</a> &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/shikhar-shiromani">linkedin</a> &nbsp;·&nbsp;
-  <a href="/assets/pdf/Shikhar_Shiromani_CV.pdf">cv</a>
+<p class="contact-row">
+  <a href="mailto:rbk.shikhar@gmail.com" title="Email" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+  <a href="https://scholar.google.com/citations?user=RvNitH0AAAAJ" title="Google Scholar" aria-label="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+  <a href="https://github.com/shikhar1729" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/shikhar-shiromani" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="/assets/pdf/Shikhar_Shiromani_CV.pdf" title="CV" aria-label="CV"><i class="ai ai-cv"></i></a>
 </p>
