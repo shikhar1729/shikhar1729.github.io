@@ -185,8 +185,8 @@ character per bit of UTF-8 — and to remove the egg, delete the span, the panel
 ## Theme gotchas found the hard way
 
 - **Editing `assets/css/main.scss` does not change the CSS cache-busting URL.** `head.liquid`
-  emits `main.css` through `bust_css_cache`, and per al_folio_core's own changelog that filter
-  digests _the theme's_ `_sass` partials — not this repo's `main.scss`. So a style change ships
+  emits `main.css` through `bust_css_cache`, and per al*folio_core's own changelog that filter
+  digests \_the theme's* `_sass` partials — not this repo's `main.scss`. So a style change ships
   under an unchanged `?v=` hash and anyone holding the old file keeps seeing old styles. GitHub
   Pages sets `max-age=600`, so it clears itself within ten minutes. Hard-refresh before
   debugging a CSS change that appears to have done nothing; this already cost one round of
