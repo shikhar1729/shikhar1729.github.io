@@ -23,5 +23,12 @@ module.exports = {
     // and page chrome (scroll-progress bar, ToC) bleeds through a zoomed image.
     "medium-zoom-overlay",
     "medium-zoom-image--opened",
+    // Easter-egg classes live in _pages/about.md, which PurgeCSS does scan, but the
+    // panel starts hidden and its state is toggled from JS. Keep them regardless.
+    "stego",
+    "stego-panel",
+    "stego-label",
+    "stego-bits",
+    "stego-out",
   ],
 };

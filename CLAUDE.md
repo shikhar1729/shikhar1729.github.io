@@ -170,15 +170,17 @@ after an `al_folio_core` upgrade, or delete the file to fall back to stock:
 
 ## The easter egg
 
-`_pages/about.md` ends with a hidden payload and a small script. A message is encoded one bit
-per character in zero-width spaces (U+200B = 0, U+200C = 1) inside `<span id="trace">`, which
-renders as nothing. The console prints a hint on load, and `reveal()` decodes and prints it.
-The joke is the site's own subject: reasoning carried in the token stream rather than the prose.
+The phrase "steganographic reasoning" in `_pages/about.md` is a button. A message is encoded
+one bit per character in zero-width spaces (U+200B = 0, U+200C = 1) inside
+`<span id="trace">`, which renders as nothing. Clicking the phrase opens a panel that first
+draws the carrier as visible dots and squares, then types out the decoded sentence. Keyboard
+accessible, and it toggles shut. Nothing is written to the console.
 
 `_pages/about.md` is in `.prettierignore` because Prettier rewrites the zero-width run. If you
-edit the prose, edit it by hand and leave the `<span id="trace">` line alone. To change the
-message, re-encode it the same way — one zero-width char per bit of UTF-8 — and to remove the
-egg, delete the comment, the span and the script.
+edit the prose, edit it by hand and leave `<span id="trace">` alone. The panel's classes are in
+the PurgeCSS safelist. To change the message, re-encode it the same way — one zero-width
+character per bit of UTF-8 — and to remove the egg, delete the span, the panel, the script, the
+`.stego*` rules in `assets/css/main.scss`, and the safelist entries.
 
 ## Theme gotchas found the hard way
 
@@ -199,5 +201,7 @@ egg, delete the comment, the span and the script.
 
 ## Still to fill in
 
-`assets/img/prof_pic.jpg` is a placeholder monogram, not a
-photo. `giscus.repo` is empty, so post comments are inert until it is set.
+`giscus.repo` is empty, so post comments are inert until it is set.
+
+`assets/img/prof_pic.jpg` is a real headshot, not a placeholder — the starter README said
+otherwise and it was never true for this repo.

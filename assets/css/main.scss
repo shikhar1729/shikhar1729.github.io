@@ -84,3 +84,42 @@ h6,
 .contact-row a:hover {
   opacity: 1;
 }
+
+/* Easter egg: the phrase "steganographic reasoning" carries a zero-width payload,
+   and clicking it decodes that payload on the page. See _pages/about.md. */
+.stego {
+  cursor: pointer;
+  border-bottom: 1px dotted currentColor;
+}
+
+.stego-panel {
+  margin: 1.25rem 0 0;
+  padding: 0.85rem 1rem;
+  border-left: 2px solid var(--global-theme-color, currentColor);
+  background: rgba(128, 128, 128, 0.07);
+  border-radius: 3px;
+}
+
+.stego-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 0.5rem;
+}
+
+.stego-bits {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  word-break: break-all;
+  opacity: 0.5;
+  min-height: 2.7em;
+}
+
+.stego-out {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  min-height: 1.5em;
+}

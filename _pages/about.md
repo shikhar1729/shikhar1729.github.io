@@ -35,7 +35,7 @@ it is not.
 
 I am a **Pivotal Research Fellow**, working with Noah Y. Siegel at Google DeepMind on
 chain-of-thought faithfulness, and a **MARS V Research Fellow** at Meridian, working with
-Julian Schulz on steganographic reasoning. Earlier in 2026 I was a **SPAR Research Fellow** at
+Julian Schulz on <span id="stego" class="stego" role="button" tabindex="0" aria-expanded="false">steganographic reasoning</span>. Earlier in 2026 I was a **SPAR Research Fellow** at
 Kairos, where I worked on attention consistency training.
 
 If you work on faithfulness, monitorability, or evaluation, I would be glad to hear from you.
@@ -48,36 +48,71 @@ If you work on faithfulness, monitorability, or evaluation, I would be glad to h
   <a href="/assets/pdf/Shikhar_Shiromani_CV.pdf" title="CV" aria-label="CV"><i class="ai ai-cv"></i></a>
 </p>
 
-<!--
-  There is reasoning in this page that the rendered text does not show.
-  It is encoded the way a model would hide it: in the token stream, not the prose.
-  Open the console and run reveal().
--->
 <span id="trace" aria-hidden="true" style="font-size: 0; line-height: 0">​‌​‌‌​​‌​‌‌​‌‌‌‌​‌‌‌​‌​‌​​‌​​​​​​‌‌‌​​‌​​‌‌​​‌​‌​‌‌​​​​‌​‌‌​​‌​​​​‌​​​​​​‌‌‌​‌​​​‌‌​‌​​​​‌‌​​‌​‌​​‌​​​​​​‌‌​​​​‌​‌‌​​​‌‌​‌‌‌​‌​​​‌‌​‌​​‌​‌‌‌​‌‌​​‌‌​​​​‌​‌‌‌​‌​​​‌‌​‌​​‌​‌‌​‌‌‌‌​‌‌​‌‌‌​​‌‌‌​​‌‌​​‌​​​​​​‌‌​‌​​‌​‌‌​‌‌‌​​‌‌‌​​‌‌​‌‌‌​‌​​​‌‌​​‌​‌​‌‌​​​​‌​‌‌​​‌​​​​‌​​​​​​‌‌​‌‌‌‌​‌‌​​‌‌​​​‌​​​​​​‌‌‌​‌​​​‌‌​‌​​​​‌‌​​‌​‌​​‌​​​​​​‌‌​‌‌‌‌​‌‌‌​‌​‌​‌‌‌​‌​​​‌‌‌​​​​​‌‌‌​‌​‌​‌‌‌​‌​​​​‌​‌‌‌​​​‌​​​​​​‌​‌​‌​​​‌‌​‌​​​​‌‌​​​​‌​‌‌‌​‌​​​​‌​​​​​​‌‌​‌​​‌​‌‌‌​​‌‌​​‌​​​​​​‌‌‌​‌​​​‌‌​‌​​​​‌‌​​‌​‌​​‌​​​​​​‌‌‌​‌‌‌​‌‌​‌​​​​‌‌​‌‌‌‌​‌‌​‌‌​​​‌‌​​‌​‌​​‌​​​​​​‌‌​‌​‌​​‌‌​‌‌‌‌​‌‌​​​‌​​​‌​‌‌‌​</span>
+
+<div id="stego-panel" class="stego-panel" hidden>
+  <div class="stego-label">carrier &mdash; 560 zero-width characters, one bit each</div>
+  <div class="stego-bits" id="stego-bits"></div>
+  <div class="stego-out" id="stego-out"></div>
+</div>
 
 <script>
   (function () {
     var ZERO = "\u200b";
-    var carrier = document.getElementById("trace");
-    var log = window["con" + "sole"].log;
+    var trigger = document.getElementById("stego");
+    var panel = document.getElementById("stego-panel");
+    var bitsEl = document.getElementById("stego-bits");
+    var outEl = document.getElementById("stego-out");
+    var carrier = document.getElementById("trace").textContent;
+    var running = false;
 
-    function decode(s) {
+    function decode(str) {
       var bits = "";
-      for (var i = 0; i < s.length; i++) bits += s[i] === ZERO ? "0" : "1";
+      for (var i = 0; i < str.length; i++) bits += str[i] === ZERO ? "0" : "1";
       var bytes = [];
       for (var j = 0; j + 8 <= bits.length; j += 8) bytes.push(parseInt(bits.slice(j, j + 8), 2));
       return new TextDecoder().decode(new Uint8Array(bytes));
     }
 
-    window.reveal = function () {
-      var out = decode(carrier.textContent);
-      log("%c" + out, "font-size:13px;line-height:1.7;font-style:italic");
-      return out;
-    };
+    function type(msg) {
+      var n = 0;
+      var t = setInterval(function () {
+        outEl.textContent = msg.slice(0, ++n);
+        if (n >= msg.length) { clearInterval(t); running = false; }
+      }, 22);
+    }
 
-    log(
-      "%cThis page carries reasoning its visible text does not.%c\nRun %creveal()%c to decode it.",
-      "font-weight:600", "", "font-family:monospace", ""
-    );
+    function run() {
+      if (running) return;
+      running = true;
+      panel.hidden = false;
+      trigger.setAttribute("aria-expanded", "true");
+      bitsEl.textContent = "";
+      outEl.textContent = "";
+
+      var glyphs = "";
+      for (var i = 0; i < carrier.length; i++) glyphs += carrier[i] === ZERO ? "\u00b7" : "\u25aa";
+
+      var shown = 0;
+      var reveal = setInterval(function () {
+        shown = Math.min(shown + 14, glyphs.length);
+        bitsEl.textContent = glyphs.slice(0, shown);
+        if (shown >= glyphs.length) { clearInterval(reveal); type(decode(carrier)); }
+      }, 16);
+    }
+
+    function toggle() {
+      if (!panel.hidden && !running) {
+        panel.hidden = true;
+        trigger.setAttribute("aria-expanded", "false");
+        return;
+      }
+      run();
+    }
+
+    trigger.addEventListener("click", toggle);
+    trigger.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+    });
   })();
 </script>
