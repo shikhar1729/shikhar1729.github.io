@@ -2,7 +2,6 @@
 layout: about
 title: about
 permalink: /
-subtitle: Machine Learning Engineer at <a href="https://www.apple.com">Apple</a>. Independent research on AI safety and interpretability.
 
 profile:
   align: right
@@ -23,18 +22,23 @@ latest_posts:
   limit: 3
 ---
 
-I am a Machine Learning Engineer at [Apple](https://www.apple.com), where I work on power and
-performance across Apple's operating systems.
+I am a Machine Learning Engineer at [Apple](https://www.apple.com), where I work on improving
+power and performance across Apple's operating systems using machine learning.
 
-Separately, in a personal capacity, I study AI safety and interpretability. The question I keep
-returning to is whether we can trust what a language model says about its own reasoning. When a
-model explains an answer, that explanation may or may not reflect the computation that produced
-it. I work on ways to measure that gap.
+Outside that, I work on AI safety and mechanistic interpretability. The question I keep
+returning to is whether a model's stated reasoning bears any load. A chain of thought is a
+sequence of tokens sampled from the same distribution as any other output; nothing forces it
+to track the computation that produced the answer. So the interesting question is not whether
+explanations sound plausible, but whether they are causally connected to the mechanism, and
+what our monitoring tools are actually measuring when they are not.
 
 I am a **Pivotal Research Fellow**, working with Noah Y. Siegel at Google DeepMind on
-chain-of-thought faithfulness, and a **MARS V Research Fellow** at Meridian, working with Julian
-Schulz on steganographic reasoning. Earlier in 2026 I was a **SPAR Fellow** at Kairos. Before
-Apple I spent six years at NVIDIA, across systems, infrastructure, and ML research.
+chain-of-thought faithfulness: when a stated rationale diverges from the features a model
+represents internally, and what that divergence does to monitors built on top of the trace. I
+am also a **MARS V Research Fellow** at Meridian, working with Julian Schulz on steganographic
+reasoning, where the concern is reasoning that is load-bearing but no longer legible in the
+text. Earlier in 2026 I was a **SPAR Fellow** at Kairos. Before Apple I spent six years at
+NVIDIA, across systems, infrastructure, and ML research.
 
 If you work on faithfulness, monitorability, or evaluation, I would be glad to hear from you.
 

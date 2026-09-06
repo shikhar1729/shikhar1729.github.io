@@ -144,8 +144,9 @@ The three older IEEE papers (ICCSS 2025, ICIDCA 2023, ICAC3N 2022) are archival 
 ```
 
 Any key listed in `filtered_bibtex_keywords` (`_config.yml`) is consumed by the theme and
-hidden from the rendered BibTeX. Four entries are currently `selected` — keep that list
-short, it is the landing page, and the site is deliberately sparse.
+hidden from the rendered BibTeX. Seven entries are currently `selected`: every accepted
+conference or workshop paper from 2025 onward. Preprints stay off the landing page, and so do
+the three older IEEE papers, which sit in a different research area.
 
 ## Local overrides of gem files
 
