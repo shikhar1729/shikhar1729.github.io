@@ -9,7 +9,7 @@ last_name: Shiromani
 contact_note: >
   Email is the fastest way to reach me.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  AI safety and interpretability researcher. Chain-of-thought faithfulness, steganographic reasoning, and behavioral evaluation of large language models.
+  ML Engineer @ Apple; AI Safety Researcher
 footer_text: >
   Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
