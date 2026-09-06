@@ -19,11 +19,11 @@ Served as a reviewer at:
 
 ## Fellowships
 
-- **Pivotal Research Fellowship**, London (2026)
+- **Pivotal Research Fellowship**, London, UK (2026)
   - Chain-of-thought faithfulness, with Noah Y. Siegel at Google DeepMind
-- **MARS V**, Meridian, Cambridge (2026)
+- **MARS V**, Meridian, Cambridge, UK (2026)
   - Steganographic reasoning in language models, with Julian Schulz
-- **SPAR**, Kairos (Spring 2026)
+- **SPAR**, Kairos, USA (Spring 2026)
   - Attention consistency training for safety
 
 ## Patents

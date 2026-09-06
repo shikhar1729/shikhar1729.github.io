@@ -14,7 +14,7 @@ social: false
 announcements:
   enabled: true
   scrollable: true
-  limit: 5
+  limit: 6
 
 latest_posts:
   enabled: false
@@ -24,11 +24,8 @@ latest_posts:
 
 I am a Machine Learning Engineer at [Apple](https://www.apple.com), where I work on improving
 power and performance across Apple's operating systems using machine learning. Before Apple I
-spent six years at NVIDIA. Most recently I was a tech lead there, building the company's first
-server lifecycle management system and working on predicting node failures to keep large GPU
-fleets up. Earlier I built an ML-driven predictive maintenance system for Blackwell and Hopper
-nodes, and before that a self-serve CI/CD platform and the camera control protocol module used
-in automotive safety assessments.
+was at NVIDIA, where I worked on predicting node failures to keep large GPU fleets up, and
+earlier on low-level, low-latency software for autonomous driving.
 
 Outside that, I work on AI safety and mechanistic interpretability. The question I keep
 returning to is whether a model's stated reasoning bears any load. The interesting question is

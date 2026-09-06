@@ -7,6 +7,7 @@
     2. dropped the entry.abbr venue badge that sat above the thumbnail
     3. the text column is col-sm-10 (was col-sm-8), so authors and venue each fit on
        one line; the thumbnail gutter is still reserved for every entry so rows align
+    4. dropped the "Awarded" button; `award` text still renders in the collapsed block
   Prettier skips this file (see .prettierignore) for the same reason.
 {%- endcomment -%}
 <div class="row">
@@ -192,11 +193,6 @@
 
     <!-- Links/Buttons -->
     <div class="links">
-      {% if entry.award %}
-        <a class="award btn btn-sm z-depth-0" role="button">
-          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
-        </a>
-      {% endif %}
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       {% endif %}
