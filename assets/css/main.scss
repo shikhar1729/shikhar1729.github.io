@@ -58,3 +58,9 @@ h6,
 .navbar-brand {
   font-family: inherit;
 }
+
+/* The about layout always emits <p class="desc">, even with no subtitle set,
+   which leaves a gap under the name. Collapse it when it is empty. */
+.desc:empty {
+  display: none;
+}
