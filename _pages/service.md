@@ -16,6 +16,8 @@ Served as a reviewer at:
 - [BlackboxNLP](https://blackboxnlp.github.io/), EMNLP 2026, Budapest
 - [Interpretability as a Science](https://interpscience.github.io/), NeurIPS 2026
 - [Pluralistic Alignment Workshop](https://pluralistic-alignment.github.io/), ICML 2026
+- [Trustworthy AI for Good (AI4GOOD)](https://trustworthy-ai-for-good.github.io/), NeurIPS 2026
+- [Transitioning from Pre-Training to Post-Training](https://pretrain2posttrain.github.io), NeurIPS 2026
 
 ## Fellowships
 
