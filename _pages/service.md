@@ -36,3 +36,4 @@ Served as a reviewer at:
 ## Recognition
 
 - IEEE Senior Member, elevated June 2026
+- International Mathematical Olympiad Training Camp (IMOTC), India, 2013
