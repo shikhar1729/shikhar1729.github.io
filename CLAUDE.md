@@ -103,7 +103,9 @@ Google Scholar had six of the ten wrong. Specifically:
 
 - Linear Predictability is a **SELVA @ ACL 2026 oral (1 of 4)**, not a preprint.
 - Where Reliability Lives is the **Mechanistic Interpretability Workshop at ICML 2026**, not ICLR.
-- ProMoral-Bench is **NeurIPS 2025**, not 2026.
+- ProMoral-Bench was the PersonaLLM/PersonaNLP workshop at **NeurIPS 2025** (non-archival), and
+  is now an **AACL-IJCNLP 2026 main-conference** paper under a revised title. One bib entry
+  covers both; the workshop talk keeps its own news item.
 - COMPASS was accepted at **five** AAAI-26 workshops; the oral was LaMAS.
 - ChameleonBench is archival: **PMLR Vol. 304, pp. 1006–1021**.
 
@@ -116,11 +118,16 @@ acceptance actually lands.
 review elsewhere. The bib entry, its news item and its CV entry were removed in the
 "Trim the site" commit — restore from git history when it lands somewhere, do not retype it.
 
-Of the recent AI-safety work, only ChameleonBench (PMLR) and SELVA are archival; the rest are
-non-archival workshops, so cite those by workshop plus date rather than implying proceedings.
+Of the recent AI-safety work, ChameleonBench (PMLR), SELVA and ProMoral-Bench (AACL-IJCNLP
+main conference) are archival; the rest are non-archival workshops, so cite those by workshop
+plus date rather than implying proceedings.
 The two older IEEE papers (ICCSS 2025, ICIDCA 2023) are archival proceedings. The 2022
 ICAC3N skin-lesion paper was removed from the site at the author's request; it is in git
 history if it ever needs to come back.
+
+When a non-archival workshop paper later lands an archival venue, **upgrade the existing entry
+rather than adding a second one** — same work, one line. ProMoral-Bench is the worked example.
+Keep the older news item, since that presentation did happen.
 
 **Do not add self-reported metrics** (citation counts, h-index) to page content. The
 `Update citations` Action populates `_data/citations.yml` from Scholar automatically.

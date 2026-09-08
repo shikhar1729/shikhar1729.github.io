@@ -69,22 +69,23 @@
   abstract    = {We show that pretrained Transformers exhibit a pervasive inter-head linear structure: the QKV vectors of an attention head can often be reconstructed as a linear combination of a small number of peer heads. This predictability is learned rather than architectural, rising during pretraining. We exploit the redundancy by caching only reference-head KV states and reconstructing the rest on the fly, achieving 2x KV-cache reduction with model-dependent accuracy trade-offs.}
 }
 
-@inproceedings{thomas2025promoral,
-  abbr        = {NeurIPS-W},
+@inproceedings{thomas2026promoral,
+  abbr        = {AACL},
   bibtex_show = {true},
-  selected    = {true},
   preview     = {promoral.jpg},
-  title       = {ProMoral-Bench: Evaluating Prompting Strategies for Moral Reasoning and Safety in LLMs},
+  selected    = {true},
+  title       = {ProMoral-Bench: Comparing Prompting Strategies for Moral Judgment and Jailbreak Robustness in LLMs},
   author      = {Subramanian Thomas, Rohan and Shiromani, Shikhar and Chaudhry, Abdullah and Li, Ruizhe and Sharma, Vasu and Zhu, Kevin and Dev, Sunishchal},
-  booktitle   = {PersonaLLM/PersonaNLP Workshop at NeurIPS 2025, Mexico City},
-  year        = {2025},
-  month       = {December},
+  booktitle   = {The 5th Asia-Pacific Chapter of the Association for Computational Linguistics and the 15th International Joint Conference on Natural Language Processing (AACL-IJCNLP), Main Conference},
+  address     = {Hengqin, China},
+  year        = {2026},
+  month       = {November},
   eprint      = {2602.13274},
   archivePrefix = {arXiv},
   primaryClass  = {cs.AI},
   arxiv       = {2602.13274},
   url         = {https://arxiv.org/abs/2602.13274},
-  abstract    = {We introduce ProMoral-Bench, a unified benchmark evaluating 11 prompting paradigms across four LLM families. Using ETHICS, Scruples, WildJailbreak, and our new robustness test ETHICS-Contrast, we measure performance via the Unified Moral Safety Score. Compact, exemplar-guided scaffolds outperform complex multi-stage reasoning at a lower token cost.}
+  abstract    = {Prompt design affects the moral judgments and refusal behavior produced by large language models (LLMs), yet controlled comparisons remain fragmented across datasets and models. We introduce ProMoral-Bench, a benchmark-style comparison of 10 prompting paradigms across four LLM families. Using ETHICS, Scruples, WildJailbreak, and our 200-pair ETHICS-Contrast set, we report task-level metrics together with Moral Competence Score (MCS), jailbreak/over-refusal Safety Robustness Score (SRS), and Unified Moral Safety Score (UMSS). UMSS is a study-specific relative summary of MCS and SRS, not an absolute measure of model safety or moral grounding. In this fixed-template evaluation, compact exemplar-guided scaffolds attain stronger competence--robustness trade-offs at lower token cost than the particular multi-stage variants tested, although multi-stage prompting occasionally improves jailbreak refusal. The few-shot demonstrations are non-overlapping but drawn from the evaluation distributions, so their advantage should not be read as out-of-distribution robustness.}
 }
 
 @article{nasser2026sage,
