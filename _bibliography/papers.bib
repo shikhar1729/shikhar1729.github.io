@@ -1,6 +1,24 @@
 ---
 ---
 
+@misc{shiromani2026falseaverage,
+  abbr        = {Preprint},
+  bibtex_show = {true},
+  preview     = {falseaverage.jpg},
+  title       = {A False Average: Chain-of-Thought Monitors Collapse Where They Are the Only Defense},
+  author      = {Shiromani, Shikhar and Richter, Leo},
+  journal     = {arXiv preprint arXiv:2608.00583},
+  year        = {2026},
+  month       = {August},
+  eprint      = {2608.00583},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv       = {2608.00583},
+  url         = {https://arxiv.org/abs/2608.00583},
+  additional_info = {Pivotal Research Fellowship. Covered in [Science News](https://www.sciencenews.org/article/ai-reasoning-bad-behavior-harder-catch).},
+  abstract    = {Chain-of-thought (CoT) monitoring is meant to catch the reward hacks that look clean in the actions and betray themselves only in the reasoning. We show that this is exactly where an adversary who controls the reasoning can defeat it. Rewriting only an agent's reasoning to read as good-faith engineering, while copying every command and output verbatim so the exploit is unchanged, drops a held-out monitor's catch rate on that subset from about 95% to under 11% in one gradient-free shot. A monitor's aggregate accuracy is a false average: dominated by hacks the actions give away, it hides the near-total collapse this rewrite produces on the subset where CoT monitoring is the only signal. The attack transfers across monitor families and agent models, reproduces with live agents, though against a calibrated monitor evasion concentrates in the strongest agent. Trace-only defenses recover it only partially, even one primed on the attack, because the rewrite stays truthful about what happened and lies only about intent; only information from outside the trace helps substantially. A probe on an open-weight surrogate monitor's activations separates the hacks its verdict misses, but a causal control shows this is a detector, not evidence the monitor secretly knows.}
+}
+
 @inproceedings{chaudhury2026pab,
   abbr        = {ICML-W},
   bibtex_show = {true},

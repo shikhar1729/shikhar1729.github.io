@@ -111,12 +111,14 @@ Google Scholar had six of the ten wrong. Specifically:
 
 Work still under review keeps `abbr = {Preprint}`, no `booktitle`, and a
 `journal = {arXiv preprint arXiv:NNNN.NNNNN}` line so the entry reads as a preprint rather
-than as an undated item. Today that is SAGE and Hypocrisy Gap. Promote an entry only when an
+than as an undated item. Today that is A False Average, SAGE and Hypocrisy Gap. Promote an entry only when an
 acceptance actually lands.
 
-**A False Average is off the site.** It was rejected from BlackboxNLP 2026 and is under
-review elsewhere. The bib entry, its news item and its CV entry were removed in the
-"Trim the site" commit — restore from git history when it lands somewhere, do not retype it.
+**A False Average is listed as a preprint, not as accepted work.** It was rejected from
+BlackboxNLP 2026 and is under review elsewhere under a revised title, so it carries
+`abbr = {Preprint}`, no `booktitle`, and is deliberately **not** `selected` — the landing page
+lists accepted work only. It was briefly pulled from the site entirely and restored once
+Science News covered it; `additional_info` carries that press link.
 
 Of the recent AI-safety work, ChameleonBench (PMLR), SELVA and ProMoral-Bench (AACL-IJCNLP
 main conference) are archival; the rest are non-archival workshops, so cite those by workshop
