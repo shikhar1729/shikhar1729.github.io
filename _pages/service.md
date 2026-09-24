@@ -18,6 +18,7 @@ Served as a reviewer at:
 - [Interpretability as a Science](https://interpscience.github.io/), NeurIPS 2026
 - [Trustworthy AI for Good (AI4GOOD)](https://trustworthy-ai-for-good.github.io/), NeurIPS 2026
 - [Transitioning from Pre-Training to Post-Training](https://pretrain2posttrain.github.io), NeurIPS 2026
+- [Interpreting Agent Behavior (IAB)](https://iab-agents.github.io/), NeurIPS 2026
 
 ## Fellowships
 

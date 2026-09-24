@@ -106,22 +106,23 @@
   abstract    = {Prompt design affects the moral judgments and refusal behavior produced by large language models (LLMs), yet controlled comparisons remain fragmented across datasets and models. We introduce ProMoral-Bench, a benchmark-style comparison of 10 prompting paradigms across four LLM families. Using ETHICS, Scruples, WildJailbreak, and our 200-pair ETHICS-Contrast set, we report task-level metrics together with Moral Competence Score (MCS), jailbreak/over-refusal Safety Robustness Score (SRS), and Unified Moral Safety Score (UMSS). UMSS is a study-specific relative summary of MCS and SRS, not an absolute measure of model safety or moral grounding. In this fixed-template evaluation, compact exemplar-guided scaffolds attain stronger competence--robustness trade-offs at lower token cost than the particular multi-stage variants tested, although multi-stage prompting occasionally improves jailbreak refusal. The few-shot demonstrations are non-overlapping but drawn from the evaluation distributions, so their advantage should not be read as out-of-distribution robustness.}
 }
 
-@article{nasser2026sage,
-  abbr        = {Preprint},
+@inproceedings{nasser2026sage,
+  abbr        = {NeurIPS},
   bibtex_show = {true},
   preview     = {sage.jpg},
-  journal     = {arXiv preprint arXiv:2602.00953},
-  title       = {SAGE: Agentic Framework for Interpretable and Clinically Translatable Computational Pathology Biomarker Discovery},
-  author      = {Almahfouz Nasser, Sahar and Pesantez Borja, Juan Francisco and Liu, Jincheng and Hasan, Tanvir and Wang, Zenghan and Ghosh, Suman and Manandhar, Sandeep and Shiromani, Shikhar and Shah, Twisha and Tokuyama, Naoto and Madabhushi, Anant},
+  selected    = {true},
+  title       = {SAGE: Evidence-First Biomarker Discovery through Multi-Agent Reasoning},
+  author      = {Almahfouz Nasser, Sahar and Pesantez Borja, Juan Francisco and Liu, Jincheng and Manandhar, Sandeep and Shiromani, Shikhar and Hasan, Mohammad Tanvir and Wang, Zenghan and Ghosh, Suman and Li, Jinchu and Xu, Xuejian and Iyer, Aniket Ramkrishnan and Tokuyama, Naoto and Shah, Twisha and Pathak, Tilak and Kumaresan, Soundharya and Abe, Yohei and Maurya, Himanshu and Madabhushi, Anant},
+  booktitle   = {Advances in Neural Information Processing Systems (NeurIPS), Main Track},
+  address     = {Sydney, Australia},
   year        = {2026},
-  month       = {February},
+  month       = {December},
   eprint      = {2602.00953},
   archivePrefix = {arXiv},
   primaryClass  = {cs.AI},
   arxiv       = {2602.00953},
   url         = {https://arxiv.org/abs/2602.00953},
-  additional_info = {Under review at NeurIPS 2026.},
-  abstract    = {We introduce SAGE (Structured Agentic system for hypothesis Generation and Evaluation), an agentic AI system designed to identify interpretable, engineered pathology biomarkers by grounding them in biological evidence. SAGE integrates literature-anchored reasoning with multimodal data analysis to correlate image-derived features with molecular biomarkers and clinically relevant outcomes.}
+  abstract    = {Engineered image-based biomarkers offer a clinically interpretable alternative to black-box AI in computational pathology, yet their discovery remains largely intuition-driven, guided by fragmented literature rather than rigorous biological validation. We introduce SAGE (Structured Agentic system for hypothesis Generation and Evaluation), a multi-agent framework that grounds biomarker discovery in biological evidence through three mechanisms: (i) knowledge-graph-anchored hypothesis generation via multi-path ontological reasoning, (ii) a debate-based multi-agent novelty assessment that stress-tests candidate biomarkers against existing literature, and (iii) an end-to-end automated validation pipeline that translates hypotheses directly into executable analyses on multimodal pathology datasets. Together, these components shift biomarker discovery from an intuition-driven, literature-browsing exercise into a structured, traceable reasoning process that clinicians and researchers can inspect, trust, and build upon.}
 }
 
 @article{shiromani2026hypocrisy,
