@@ -153,6 +153,12 @@ Keep the older news item, since that presentation did happen.
 }
 ```
 
+**Keep `papers.bib` in reverse-chronological file order** (newest `year`, then newest `month`,
+first). jekyll-scholar is configured with `group_by: year` and `group_order: descending`, so it
+orders the _year headings_ for you — but inside a year it just follows file order. Append a new
+entry at the wrong place and the months come out scrambled under the right heading. Insert at
+the position the date implies; there is no sort setting doing it for you.
+
 Any key listed in `filtered_bibtex_keywords` (`_config.yml`) is consumed by the theme and
 hidden from the rendered BibTeX. Seven entries are currently `selected`: every accepted
 conference or workshop paper from 2025 onward. Preprints stay off the landing page, and so do

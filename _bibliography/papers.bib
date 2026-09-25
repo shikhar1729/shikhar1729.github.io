@@ -1,111 +1,6 @@
 ---
 ---
 
-@article{shiromani2026falseaverage,
-  abbr        = {Preprint},
-  bibtex_show = {true},
-  preview     = {falseaverage.jpg},
-  title       = {A False Average: Chain-of-Thought Monitors Collapse Where They Are the Only Defense},
-  author      = {Shiromani, Shikhar and Richter, Leo},
-  journal     = {arXiv preprint arXiv:2608.00583},
-  year        = {2026},
-  month       = {August},
-  eprint      = {2608.00583},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.LG},
-  arxiv       = {2608.00583},
-  url         = {https://arxiv.org/abs/2608.00583},
-  additional_info = {Pivotal Research Fellowship. Covered in [Science News](https://www.sciencenews.org/article/ai-reasoning-bad-behavior-harder-catch).},
-  abstract    = {Chain-of-thought (CoT) monitoring is meant to catch the reward hacks that look clean in the actions and betray themselves only in the reasoning. We show that this is exactly where an adversary who controls the reasoning can defeat it. Rewriting only an agent's reasoning to read as good-faith engineering, while copying every command and output verbatim so the exploit is unchanged, drops a held-out monitor's catch rate on that subset from about 95% to under 11% in one gradient-free shot. A monitor's aggregate accuracy is a false average: dominated by hacks the actions give away, it hides the near-total collapse this rewrite produces on the subset where CoT monitoring is the only signal. The attack transfers across monitor families and agent models, reproduces with live agents, though against a calibrated monitor evasion concentrates in the strongest agent. Trace-only defenses recover it only partially, even one primed on the attack, because the rewrite stays truthful about what happened and lies only about intent; only information from outside the trace helps substantially. A probe on an open-weight surrogate monitor's activations separates the hacks its verdict misses, but a causal control shows this is a detector, not evidence the monitor secretly knows.}
-}
-
-@inproceedings{chaudhury2026pab,
-  abbr        = {ICML-W},
-  bibtex_show = {true},
-  preview     = {pab.jpg},
-  selected    = {true},
-  title       = {Benchmarking Pluralistic Alignment Through Persona-Conditioned Behavioral Evaluation},
-  author      = {Chaudhury, Archie and Shiromani, Shikhar and Mehta, Ayushi},
-  booktitle   = {Pluralistic Alignment Workshop at ICML 2026, Seoul},
-  year        = {2026},
-  month       = {July},
-  abstract    = {We introduce the Pluralistic Alignment Benchmark (PAB), covering 320 scenarios, 8 behavioral-risk categories, and 63 synthetic personas. Evaluating 9 leading LLMs with a multi-judge pipeline reveals substantial persona-conditioned drift in manipulation, concealment, persuasion, and sycophancy.}
-}
-
-@inproceedings{mann2026visualslie,
-  abbr        = {ICLR-W},
-  bibtex_show = {true},
-  selected    = {true},
-  preview     = {visualslie.jpg},
-  title       = {Visuals Lie, Consistency Speaks: Disentangling Spatial Attention from Reliability in Vision-Language Models},
-  author      = {Mann, Logan and Xia, Yi and Saravanan, Ajit and Dave, Ishan and Ismail, Saadullah and Shiromani, Shikhar and Huang, Emily and Li, Ruizhe and Zhu, Kevin},
-  booktitle   = {Workshop on Multimodal Intelligence at ICLR 2026, Rio de Janeiro},
-  year        = {2026},
-  month       = {April},
-  eprint      = {2606.17389},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.CV},
-  arxiv       = {2606.17389},
-  url         = {https://arxiv.org/abs/2606.17389},
-  abstract    = {A common intuition, which we call the Attention-Confidence Assumption, holds that reliability follows from structural visual perception. We challenge this through the VLM Reliability Probe (VRP), a cross-family study of reliability signals in contemporary VLMs. Spatial attention has near-zero correlation with accuracy, while self-consistency is the dominant predictor of truth. Scaling causal interventions exposes a sharp architectural divergence between late-fusion and early-fusion families.}
-}
-
-@article{mann2026reliabilitylives,
-  abbr        = {ICML-W},
-  bibtex_show = {true},
-  selected    = {true},
-  preview     = {reliabilitylives.jpg},
-  title       = {Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits},
-  author      = {Mann, Logan and Saravanan, Ajit and Dave, Ishan and Shiromani, Shikhar and Ismail, Saadullah and Xia, Yi and Huang, Emily},
-  journal     = {Mechanistic Interpretability Workshop at ICML 2026, Seoul},
-  year        = {2026},
-  month       = {July},
-  eprint      = {2605.08200},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.AI},
-  arxiv       = {2605.08200},
-  url         = {https://arxiv.org/abs/2605.08200},
-  abstract    = {We instrument three open-weight VLM families with a unified mechanistic pipeline that compares attention structure, generation dynamics, and hidden-state geometry against a single correctness label. Attention structure is a near-zero predictor of correctness, reliability becomes legible later in the computation, and causal neuron-level ablations expose a sharp architectural split with direct monitor-design implications.}
-}
-
-@inproceedings{shaikh2026linearheads,
-  abbr        = {ACL-W},
-  bibtex_show = {true},
-  preview     = {linearheads.jpg},
-  selected    = {true},
-  title       = {Linear Predictability of Attention Heads in Large Language Models},
-  author      = {Shaikh, Khalid and Singh, Asmit Kumar and Dsouza, Rebecca Christopher and Shiromani, Shikhar},
-  booktitle   = {SELVA Workshop at ACL 2026, San Diego (Oral, 1 of 4)},
-  year        = {2026},
-  month       = {July},
-  award       = {Oral, one of four selected},
-  eprint      = {2603.13314},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.LG},
-  arxiv       = {2603.13314},
-  url         = {https://arxiv.org/abs/2603.13314},
-  abstract    = {We show that pretrained Transformers exhibit a pervasive inter-head linear structure: the QKV vectors of an attention head can often be reconstructed as a linear combination of a small number of peer heads. This predictability is learned rather than architectural, rising during pretraining. We exploit the redundancy by caching only reference-head KV states and reconstructing the rest on the fly, achieving 2x KV-cache reduction with model-dependent accuracy trade-offs.}
-}
-
-@inproceedings{thomas2026promoral,
-  abbr        = {AACL-IJCNLP},
-  bibtex_show = {true},
-  preview     = {promoral.jpg},
-  selected    = {true},
-  title       = {ProMoral-Bench: Comparing Prompting Strategies for Moral Judgment and Jailbreak Robustness in LLMs},
-  author      = {Subramanian Thomas, Rohan and Shiromani, Shikhar and Chaudhry, Abdullah and Li, Ruizhe and Sharma, Vasu and Zhu, Kevin and Dev, Sunishchal},
-  booktitle   = {AACL-IJCNLP 2026, Main Conference},
-  address     = {Hengqin, China},
-  year        = {2026},
-  month       = {November},
-  eprint      = {2602.13274},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.AI},
-  arxiv       = {2602.13274},
-  url         = {https://arxiv.org/abs/2602.13274},
-  abstract    = {Prompt design affects the moral judgments and refusal behavior produced by large language models (LLMs), yet controlled comparisons remain fragmented across datasets and models. We introduce ProMoral-Bench, a benchmark-style comparison of 10 prompting paradigms across four LLM families. Using ETHICS, Scruples, WildJailbreak, and our 200-pair ETHICS-Contrast set, we report task-level metrics together with Moral Competence Score (MCS), jailbreak/over-refusal Safety Robustness Score (SRS), and Unified Moral Safety Score (UMSS). UMSS is a study-specific relative summary of MCS and SRS, not an absolute measure of model safety or moral grounding. In this fixed-template evaluation, compact exemplar-guided scaffolds attain stronger competence--robustness trade-offs at lower token cost than the particular multi-stage variants tested, although multi-stage prompting occasionally improves jailbreak refusal. The few-shot demonstrations are non-overlapping but drawn from the evaluation distributions, so their advantage should not be read as out-of-distribution robustness.}
-}
-
 @inproceedings{nasser2026sage,
   abbr        = {NeurIPS},
   bibtex_show = {true},
@@ -124,7 +19,105 @@
   url         = {https://arxiv.org/abs/2602.00953},
   abstract    = {Engineered image-based biomarkers offer a clinically interpretable alternative to black-box AI in computational pathology, yet their discovery remains largely intuition-driven, guided by fragmented literature rather than rigorous biological validation. We introduce SAGE (Structured Agentic system for hypothesis Generation and Evaluation), a multi-agent framework that grounds biomarker discovery in biological evidence through three mechanisms: (i) knowledge-graph-anchored hypothesis generation via multi-path ontological reasoning, (ii) a debate-based multi-agent novelty assessment that stress-tests candidate biomarkers against existing literature, and (iii) an end-to-end automated validation pipeline that translates hypotheses directly into executable analyses on multimodal pathology datasets. Together, these components shift biomarker discovery from an intuition-driven, literature-browsing exercise into a structured, traceable reasoning process that clinicians and researchers can inspect, trust, and build upon.}
 }
-
+@inproceedings{thomas2026promoral,
+  abbr        = {AACL-IJCNLP},
+  bibtex_show = {true},
+  preview     = {promoral.jpg},
+  selected    = {true},
+  title       = {ProMoral-Bench: Comparing Prompting Strategies for Moral Judgment and Jailbreak Robustness in LLMs},
+  author      = {Subramanian Thomas, Rohan and Shiromani, Shikhar and Chaudhry, Abdullah and Li, Ruizhe and Sharma, Vasu and Zhu, Kevin and Dev, Sunishchal},
+  booktitle   = {AACL-IJCNLP 2026, Main Conference},
+  address     = {Hengqin, China},
+  year        = {2026},
+  month       = {November},
+  eprint      = {2602.13274},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv       = {2602.13274},
+  url         = {https://arxiv.org/abs/2602.13274},
+  abstract    = {Prompt design affects the moral judgments and refusal behavior produced by large language models (LLMs), yet controlled comparisons remain fragmented across datasets and models. We introduce ProMoral-Bench, a benchmark-style comparison of 10 prompting paradigms across four LLM families. Using ETHICS, Scruples, WildJailbreak, and our 200-pair ETHICS-Contrast set, we report task-level metrics together with Moral Competence Score (MCS), jailbreak/over-refusal Safety Robustness Score (SRS), and Unified Moral Safety Score (UMSS). UMSS is a study-specific relative summary of MCS and SRS, not an absolute measure of model safety or moral grounding. In this fixed-template evaluation, compact exemplar-guided scaffolds attain stronger competence--robustness trade-offs at lower token cost than the particular multi-stage variants tested, although multi-stage prompting occasionally improves jailbreak refusal. The few-shot demonstrations are non-overlapping but drawn from the evaluation distributions, so their advantage should not be read as out-of-distribution robustness.}
+}
+@article{shiromani2026falseaverage,
+  abbr        = {Preprint},
+  bibtex_show = {true},
+  preview     = {falseaverage.jpg},
+  title       = {A False Average: Chain-of-Thought Monitors Collapse Where They Are the Only Defense},
+  author      = {Shiromani, Shikhar and Richter, Leo},
+  journal     = {arXiv preprint arXiv:2608.00583},
+  year        = {2026},
+  month       = {August},
+  eprint      = {2608.00583},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv       = {2608.00583},
+  url         = {https://arxiv.org/abs/2608.00583},
+  additional_info = {Pivotal Research Fellowship. Covered in [Science News](https://www.sciencenews.org/article/ai-reasoning-bad-behavior-harder-catch).},
+  abstract    = {Chain-of-thought (CoT) monitoring is meant to catch the reward hacks that look clean in the actions and betray themselves only in the reasoning. We show that this is exactly where an adversary who controls the reasoning can defeat it. Rewriting only an agent's reasoning to read as good-faith engineering, while copying every command and output verbatim so the exploit is unchanged, drops a held-out monitor's catch rate on that subset from about 95% to under 11% in one gradient-free shot. A monitor's aggregate accuracy is a false average: dominated by hacks the actions give away, it hides the near-total collapse this rewrite produces on the subset where CoT monitoring is the only signal. The attack transfers across monitor families and agent models, reproduces with live agents, though against a calibrated monitor evasion concentrates in the strongest agent. Trace-only defenses recover it only partially, even one primed on the attack, because the rewrite stays truthful about what happened and lies only about intent; only information from outside the trace helps substantially. A probe on an open-weight surrogate monitor's activations separates the hacks its verdict misses, but a causal control shows this is a detector, not evidence the monitor secretly knows.}
+}
+@inproceedings{chaudhury2026pab,
+  abbr        = {ICML-W},
+  bibtex_show = {true},
+  preview     = {pab.jpg},
+  selected    = {true},
+  title       = {Benchmarking Pluralistic Alignment Through Persona-Conditioned Behavioral Evaluation},
+  author      = {Chaudhury, Archie and Shiromani, Shikhar and Mehta, Ayushi},
+  booktitle   = {Pluralistic Alignment Workshop at ICML 2026, Seoul},
+  year        = {2026},
+  month       = {July},
+  abstract    = {We introduce the Pluralistic Alignment Benchmark (PAB), covering 320 scenarios, 8 behavioral-risk categories, and 63 synthetic personas. Evaluating 9 leading LLMs with a multi-judge pipeline reveals substantial persona-conditioned drift in manipulation, concealment, persuasion, and sycophancy.}
+}
+@article{mann2026reliabilitylives,
+  abbr        = {ICML-W},
+  bibtex_show = {true},
+  selected    = {true},
+  preview     = {reliabilitylives.jpg},
+  title       = {Where Reliability Lives in Vision-Language Models: A Mechanistic Study of Attention, Hidden States, and Causal Circuits},
+  author      = {Mann, Logan and Saravanan, Ajit and Dave, Ishan and Shiromani, Shikhar and Ismail, Saadullah and Xia, Yi and Huang, Emily},
+  journal     = {Mechanistic Interpretability Workshop at ICML 2026, Seoul},
+  year        = {2026},
+  month       = {July},
+  eprint      = {2605.08200},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.AI},
+  arxiv       = {2605.08200},
+  url         = {https://arxiv.org/abs/2605.08200},
+  abstract    = {We instrument three open-weight VLM families with a unified mechanistic pipeline that compares attention structure, generation dynamics, and hidden-state geometry against a single correctness label. Attention structure is a near-zero predictor of correctness, reliability becomes legible later in the computation, and causal neuron-level ablations expose a sharp architectural split with direct monitor-design implications.}
+}
+@inproceedings{shaikh2026linearheads,
+  abbr        = {ACL-W},
+  bibtex_show = {true},
+  preview     = {linearheads.jpg},
+  selected    = {true},
+  title       = {Linear Predictability of Attention Heads in Large Language Models},
+  author      = {Shaikh, Khalid and Singh, Asmit Kumar and Dsouza, Rebecca Christopher and Shiromani, Shikhar},
+  booktitle   = {SELVA Workshop at ACL 2026, San Diego (Oral, 1 of 4)},
+  year        = {2026},
+  month       = {July},
+  award       = {Oral, one of four selected},
+  eprint      = {2603.13314},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv       = {2603.13314},
+  url         = {https://arxiv.org/abs/2603.13314},
+  abstract    = {We show that pretrained Transformers exhibit a pervasive inter-head linear structure: the QKV vectors of an attention head can often be reconstructed as a linear combination of a small number of peer heads. This predictability is learned rather than architectural, rising during pretraining. We exploit the redundancy by caching only reference-head KV states and reconstructing the rest on the fly, achieving 2x KV-cache reduction with model-dependent accuracy trade-offs.}
+}
+@inproceedings{mann2026visualslie,
+  abbr        = {ICLR-W},
+  bibtex_show = {true},
+  selected    = {true},
+  preview     = {visualslie.jpg},
+  title       = {Visuals Lie, Consistency Speaks: Disentangling Spatial Attention from Reliability in Vision-Language Models},
+  author      = {Mann, Logan and Xia, Yi and Saravanan, Ajit and Dave, Ishan and Ismail, Saadullah and Shiromani, Shikhar and Huang, Emily and Li, Ruizhe and Zhu, Kevin},
+  booktitle   = {Workshop on Multimodal Intelligence at ICLR 2026, Rio de Janeiro},
+  year        = {2026},
+  month       = {April},
+  eprint      = {2606.17389},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  arxiv       = {2606.17389},
+  url         = {https://arxiv.org/abs/2606.17389},
+  abstract    = {A common intuition, which we call the Attention-Confidence Assumption, holds that reliability follows from structural visual perception. We challenge this through the VLM Reliability Probe (VRP), a cross-family study of reliability signals in contemporary VLMs. Spatial attention has near-zero correlation with accuracy, while self-consistency is the dominant predictor of truth. Scaling causal interventions exposes a sharp architectural divergence between late-fusion and early-fusion families.}
+}
 @article{shiromani2026hypocrisy,
   abbr        = {Preprint},
   bibtex_show = {true},
@@ -141,7 +134,6 @@
   url         = {https://arxiv.org/abs/2602.02496},
   abstract    = {We introduce the Hypocrisy Gap, a mechanistic metric using Sparse Autoencoders to quantify the divergence between a model's internal reasoning and its final generation. By comparing an internal truth belief, derived via sparse linear probes, to the final generated trajectory in latent space, we detect a model's tendency toward unfaithful behavior. On Gemma, Llama, and Qwen, the method reaches AUROC 0.55-0.74, consistently outperforming a decision-aligned log-probability baseline.}
 }
-
 @inproceedings{sahay2026compass,
   abbr        = {AAAI-W},
   bibtex_show = {true},
@@ -160,7 +152,6 @@
   award       = {Oral at LaMAS; accepted at five AAAI-26 workshops},
   abstract    = {COMPASS is a feedback-driven decoding framework that uses a Context Reliance Score to steer attention heads toward provided evidence during generation. Without retraining or multiple passes, it reduces contextual hallucinations by 2.8-5.8 percentage points across HotpotQA, XSum, HaluEval, and RAGTruth.}
 }
-
 @inproceedings{chaudhury2025chameleonbench,
   abbr        = {ACML},
   bibtex_show = {true},
@@ -177,7 +168,6 @@
   award       = {Oral presentation},
   abstract    = {An 800-prompt benchmark across 8 misbehavior categories with an external judge pipeline for alignment-faking evaluation. Across 6 leading LLMs we observe up to 20% higher harmful response rates in free-form versus test-like settings.}
 }
-
 @inproceedings{azarcon2025lung,
   abbr        = {ICCSS},
   bibtex_show = {true},
@@ -189,7 +179,6 @@
   year        = {2025},
   month       = {May}
 }
-
 @inproceedings{costales2023blockchain,
   abbr        = {ICIDCA},
   bibtex_show = {true},
