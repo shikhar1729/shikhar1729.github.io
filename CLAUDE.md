@@ -111,14 +111,13 @@ Google Scholar had six of the ten wrong. Specifically:
 
 Work still under review keeps `abbr = {Preprint}`, no `booktitle`, and a
 `journal = {arXiv preprint arXiv:NNNN.NNNNN}` line so the entry reads as a preprint rather
-than as an undated item. Today that is A False Average and Hypocrisy Gap. Promote an entry only when an
+than as an undated item. Today that is Hypocrisy Gap. Promote an entry only when an
 acceptance actually lands.
 
-**A False Average is listed as a preprint, not as accepted work.** It was rejected from
-BlackboxNLP 2026 and is under review elsewhere under a revised title, so it carries
-`abbr = {Preprint}`, no `booktitle`, and is deliberately **not** `selected` — the landing page
-lists accepted work only. It was briefly pulled from the site entirely and restored once
-Science News covered it; `additional_info` carries that press link.
+**A False Average** was rejected from BlackboxNLP 2026, briefly pulled from the site
+entirely, restored as a preprint once Science News covered it, and is now an **Agents in the
+Wild (AIWILD) @ NeurIPS 2026** workshop paper under a revised title. Non-archival.
+`additional_info` carries the press link. Its arXiv posting still has the older title.
 
 Of the recent AI-safety work, ChameleonBench (PMLR), SELVA, ProMoral-Bench (AACL-IJCNLP main
 conference) and SAGE (NeurIPS 2026 main track) are archival; the rest are non-archival workshops, so cite those by workshop
@@ -160,7 +159,7 @@ entry at the wrong place and the months come out scrambled under the right headi
 the position the date implies; there is no sort setting doing it for you.
 
 Any key listed in `filtered_bibtex_keywords` (`_config.yml`) is consumed by the theme and
-hidden from the rendered BibTeX. Seven entries are currently `selected`: every accepted
+hidden from the rendered BibTeX. Nine entries are currently `selected`: every accepted
 conference or workshop paper from 2025 onward. Preprints stay off the landing page, and so do
 the two older IEEE papers, which sit in a different research area.
 

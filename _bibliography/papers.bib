@@ -19,6 +19,25 @@
   url         = {https://arxiv.org/abs/2602.00953},
   abstract    = {Engineered image-based biomarkers offer a clinically interpretable alternative to black-box AI in computational pathology, yet their discovery remains largely intuition-driven, guided by fragmented literature rather than rigorous biological validation. We introduce SAGE (Structured Agentic system for hypothesis Generation and Evaluation), a multi-agent framework that grounds biomarker discovery in biological evidence through three mechanisms: (i) knowledge-graph-anchored hypothesis generation via multi-path ontological reasoning, (ii) a debate-based multi-agent novelty assessment that stress-tests candidate biomarkers against existing literature, and (iii) an end-to-end automated validation pipeline that translates hypotheses directly into executable analyses on multimodal pathology datasets. Together, these components shift biomarker discovery from an intuition-driven, literature-browsing exercise into a structured, traceable reasoning process that clinicians and researchers can inspect, trust, and build upon.}
 }
+@inproceedings{shiromani2026falseaverage,
+  abbr        = {NeurIPS-W},
+  bibtex_show = {true},
+  preview     = {falseaverage.jpg},
+  selected    = {true},
+  title       = {A False Average: Pooled CoT-Monitor Accuracy Conceals a Reasoning-Dependent Fragility},
+  author      = {Shiromani, Shikhar and Richter, Leo},
+  booktitle   = {Agents in the Wild Workshop (AIWILD) at NeurIPS 2026},
+  address     = {Sydney, Australia},
+  year        = {2026},
+  month       = {December},
+  eprint      = {2608.00583},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  arxiv       = {2608.00583},
+  url         = {https://arxiv.org/abs/2608.00583},
+  additional_info = {Pivotal Research Fellowship. Covered in [Science News](https://www.sciencenews.org/article/ai-reasoning-bad-behavior-harder-catch).},
+  abstract    = {Chain-of-thought (CoT) monitoring is meant to catch the reward hacks that look clean in the actions and betray themselves only in the reasoning. We show that this is exactly where an adversary who controls the reasoning can defeat it. Rewriting only an agent's reasoning to read as good-faith engineering, while copying every command and output verbatim so the exploit is unchanged, drops a held-out monitor's catch rate on that subset from about 95% to under 11% in one gradient-free shot. A monitor's aggregate accuracy is a false average: dominated by hacks the actions give away, it hides the near-total collapse this rewrite produces on the subset where CoT monitoring is the only signal. The attack transfers across monitor families and agent models, reproduces with live agents, though against a calibrated monitor evasion concentrates in the strongest agent. Trace-only defenses recover it only partially, even one primed on the attack, because the rewrite stays truthful about what happened and lies only about intent; only information from outside the trace helps substantially. A probe on an open-weight surrogate monitor's activations separates the hacks its verdict misses, but a causal control shows this is a detector, not evidence the monitor secretly knows.}
+}
 @inproceedings{thomas2026promoral,
   abbr        = {AACL-IJCNLP},
   bibtex_show = {true},
@@ -36,23 +55,6 @@
   arxiv       = {2602.13274},
   url         = {https://arxiv.org/abs/2602.13274},
   abstract    = {Prompt design affects the moral judgments and refusal behavior produced by large language models (LLMs), yet controlled comparisons remain fragmented across datasets and models. We introduce ProMoral-Bench, a benchmark-style comparison of 10 prompting paradigms across four LLM families. Using ETHICS, Scruples, WildJailbreak, and our 200-pair ETHICS-Contrast set, we report task-level metrics together with Moral Competence Score (MCS), jailbreak/over-refusal Safety Robustness Score (SRS), and Unified Moral Safety Score (UMSS). UMSS is a study-specific relative summary of MCS and SRS, not an absolute measure of model safety or moral grounding. In this fixed-template evaluation, compact exemplar-guided scaffolds attain stronger competence--robustness trade-offs at lower token cost than the particular multi-stage variants tested, although multi-stage prompting occasionally improves jailbreak refusal. The few-shot demonstrations are non-overlapping but drawn from the evaluation distributions, so their advantage should not be read as out-of-distribution robustness.}
-}
-@article{shiromani2026falseaverage,
-  abbr        = {Preprint},
-  bibtex_show = {true},
-  preview     = {falseaverage.jpg},
-  title       = {A False Average: Chain-of-Thought Monitors Collapse Where They Are the Only Defense},
-  author      = {Shiromani, Shikhar and Richter, Leo},
-  journal     = {arXiv preprint arXiv:2608.00583},
-  year        = {2026},
-  month       = {August},
-  eprint      = {2608.00583},
-  archivePrefix = {arXiv},
-  primaryClass  = {cs.LG},
-  arxiv       = {2608.00583},
-  url         = {https://arxiv.org/abs/2608.00583},
-  additional_info = {Pivotal Research Fellowship. Covered in [Science News](https://www.sciencenews.org/article/ai-reasoning-bad-behavior-harder-catch).},
-  abstract    = {Chain-of-thought (CoT) monitoring is meant to catch the reward hacks that look clean in the actions and betray themselves only in the reasoning. We show that this is exactly where an adversary who controls the reasoning can defeat it. Rewriting only an agent's reasoning to read as good-faith engineering, while copying every command and output verbatim so the exploit is unchanged, drops a held-out monitor's catch rate on that subset from about 95% to under 11% in one gradient-free shot. A monitor's aggregate accuracy is a false average: dominated by hacks the actions give away, it hides the near-total collapse this rewrite produces on the subset where CoT monitoring is the only signal. The attack transfers across monitor families and agent models, reproduces with live agents, though against a calibrated monitor evasion concentrates in the strongest agent. Trace-only defenses recover it only partially, even one primed on the attack, because the rewrite stays truthful about what happened and lies only about intent; only information from outside the trace helps substantially. A probe on an open-weight surrogate monitor's activations separates the hacks its verdict misses, but a causal control shows this is a detector, not evidence the monitor secretly knows.}
 }
 @inproceedings{chaudhury2026pab,
   abbr        = {ICML-W},

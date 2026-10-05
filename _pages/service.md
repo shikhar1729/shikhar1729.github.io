@@ -32,7 +32,7 @@ Served as a reviewer at:
 ## Patents
 
 - Machine Learning-Based Anomaly Detection Using Data Center Metrics
-  - Pending with USPTO, Mar 2025
+  - [US 2026/0267765 A1](https://patents.justia.com/patent/20260267765), published Sep 2026; filed Mar 2025, NVIDIA
 
 ## Recognition
 
