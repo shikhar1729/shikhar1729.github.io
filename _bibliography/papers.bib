@@ -25,7 +25,7 @@
   preview     = {falseaverage.jpg},
   selected    = {true},
   title       = {A False Average: Pooled CoT-Monitor Accuracy Conceals a Reasoning-Dependent Fragility},
-  author      = {Shiromani, Shikhar and Richter, Leo},
+  author      = {Shiromani, Shikhar and Richter, Leo and Siegel, Noah},
   booktitle   = {Agents in the Wild Workshop (AIWILD) at NeurIPS 2026},
   address     = {Sydney, Australia},
   year        = {2026},
@@ -34,9 +34,10 @@
   archivePrefix = {arXiv},
   primaryClass  = {cs.LG},
   arxiv       = {2608.00583},
+  code        = {https://github.com/shikhar1729/false-average},
   url         = {https://arxiv.org/abs/2608.00583},
   additional_info = {Pivotal Research Fellowship. Covered in [Science News](https://www.sciencenews.org/article/ai-reasoning-bad-behavior-harder-catch).},
-  abstract    = {Chain-of-thought (CoT) monitoring is meant to catch the reward hacks that look clean in the actions and betray themselves only in the reasoning. We show that this is exactly where an adversary who controls the reasoning can defeat it. Rewriting only an agent's reasoning to read as good-faith engineering, while copying every command and output verbatim so the exploit is unchanged, drops a held-out monitor's catch rate on that subset from about 95% to under 11% in one gradient-free shot. A monitor's aggregate accuracy is a false average: dominated by hacks the actions give away, it hides the near-total collapse this rewrite produces on the subset where CoT monitoring is the only signal. The attack transfers across monitor families and agent models, reproduces with live agents, though against a calibrated monitor evasion concentrates in the strongest agent. Trace-only defenses recover it only partially, even one primed on the attack, because the rewrite stays truthful about what happened and lies only about intent; only information from outside the trace helps substantially. A probe on an open-weight surrogate monitor's activations separates the hacks its verdict misses, but a causal control shows this is a detector, not evidence the monitor secretly knows.}
+  abstract    = {Chain-of-thought (CoT) monitors are reported by their aggregate accuracy on a pool of reward hacks. We show that this number is a false average. On Terminal Wrench, about 77% of hacks are given away by the actions alone, and the monitor's pooled accuracy is dominated by them; on the remaining 23%, which an action-only monitor misses, the same monitor is fragile. We expose the fragility with a controlled attack: we rewrite only the agent's reasoning to read as good-faith engineering, leaving every command and output byte-identical. One gradient-free rewrite drops a held-out monitor's catch rate on that subset from about 95% to between 4 and 11%, while the pooled rate falls only about 25 points, near what the subset's share of the pool times its collapse predicts. The rewrite stays truthful about what happened and lies only about intent, so the trace-only monitors we test recover little, even when warned about the attack; of our defenses, only information from outside the trace helps much. The attack transfers across monitor and agent families, and the dataset's own hack labels show the same gradient with no monitor in the definition. Live agents told to hack on 27 tasks, with no monitor feedback, produce hollow hacks, but a monitor calibrated on each model's own honest solves catches nearly all of them. Applying the same rewrite to these live hacks keeps all 111 action-visible ones caught and lowers catch on the 16 whose actions score below 0.5 only from 16 to 13: the effect lands where the false average predicts, but the collapse stays a controlled result. A linear probe on a surrogate monitor's activations out-reads its verdict on the obfuscated hacks (AUC up to 0.98), but a behavioral control shows this edge does not, by itself, mean the monitor knows more than it says. Monitor accuracy should be reported on the reasoning-dependent subset, where the defense is load-bearing.}
 }
 @inproceedings{thomas2026promoral,
   abbr        = {AACL-IJCNLP},
